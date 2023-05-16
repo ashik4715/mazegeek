@@ -1,0 +1,212 @@
+fields:
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    job_offer:
+        label: 'Job Offer'
+        prompt: 'Add Job Offer'
+        span: full
+        type: repeater
+        form:
+            fields:
+                offer_title:
+                    label: 'Offer Title'
+                    span: left
+                    placeholder: 'Offer Title'
+                    required: 1
+                    type: text
+                offer_logo:
+                    label: 'Offer Logo'
+                    mode: file
+                    span: right
+                    required: 1
+                    type: mediafinder
+    job_list:
+        label: 'Job List'
+        prompt: 'Add Job Item'
+        span: full
+        type: repeater
+        form:
+            fields:
+                job_designation:
+                    label: 'Job Designation'
+                    span: auto
+                    placeholder: 'Enter Job Designation'
+                    required: 1
+                    type: text
+                job_location:
+                    label: 'Job Location'
+                    span: auto
+                    placeholder: 'Enter Job Location'
+                    required: 1
+                    type: text
+                job_nature:
+                    label: 'Job Nature'
+                    options:
+                        1: Full-Time
+                        2: Part-Time
+                    span: auto
+                    placeholder: 'Enter Job Nature'
+                    required: 1
+                    type: dropdown
+                job_deadline:
+                    label: 'Job Deadline'
+                    mode: date
+                    span: auto
+                    required: 1
+                    type: datepicker
+                job_icon:
+                    label: 'Job Icon'
+                    mode: file
+                    span: auto
+                    required: 1
+                    type: mediafinder
+    job_details:
+        label: 'Job Details'
+        prompt: 'Add Job Detail'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                job_designation:
+                    label: 'Job Designation'
+                    span: left
+                    placeholder: 'Enter Job Designation'
+                    required: 1
+                    type: text
+                contact_email:
+                    label: 'Contact Email Address'
+                    span: right
+                    placeholder: 'Enter Contact Email Address'
+                    required: 1
+                    type: text
+                job_nature:
+                    label: 'Job Nature'
+                    options:
+                        1: Full-Time
+                        2: Part-Time
+                    span: auto
+                    placeholder: 'Choose Job Nature'
+                    required: 1
+                    type: dropdown
+                job_location:
+                    label: 'Job Location'
+                    span: auto
+                    placeholder: 'Enter Job Location'
+                    required: 1
+                    type: text
+                job_description:
+                    label: 'Job Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter job_description'
+                    required: 1
+                    type: richeditor
+                responsibility:
+                    label: Responsibility
+                    prompt: 'Add Responsibility'
+                    span: auto
+                    type: repeater
+                    form:
+                        fields:
+                            job_responsibility:
+                                label: 'Job Responsibility'
+                                span: full
+                                placeholder: 'Enter Job Responsibility'
+                                type: text
+                summary:
+                    label: 'Job Summary'
+                    prompt: 'Add Job Summary'
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            job_vacancy:
+                                label: 'Job Vacancy'
+                                span: auto
+                                placeholder: 'Enter Job Vacancy'
+                                required: 1
+                                type: number
+                            job_status:
+                                label: 'Employment Status'
+                                options:
+                                    1: Full-Time
+                                    2: Part-Time
+                                span: auto
+                                placeholder: 'Choose Employment Status'
+                                required: 1
+                                type: dropdown
+                            job_location:
+                                label: 'Job Location'
+                                span: auto
+                                placeholder: 'Enter Job Location'
+                                required: 1
+                                type: text
+                            gender:
+                                label: Gender
+                                options:
+                                    1: Male
+                                    2: Female
+                                span: auto
+                                placeholder: 'Choose Gender'
+                                required: 1
+                                type: dropdown
+                            application_deadline:
+                                label: 'Application Deadline'
+                                mode: date
+                                span: auto
+                                placeholder: 'Application Deadline'
+                                required: 1
+                                type: datepicker
+                            job_experience:
+                                label: 'Job Experience'
+                                span: auto
+                                placeholder: 'Enter Job Experience'
+                                required: 1
+                                type: text
+                focus:
+                    label: 'Job Focus'
+                    prompt: 'Add Job Focus'
+                    span: auto
+                    type: repeater
+                    form:
+                        fields:
+                            job_focus:
+                                label: 'Job Focus'
+                                span: full
+                                placeholder: 'Job Focus'
+                                required: 1
+                                type: text
+                benefit:
+                    label: 'Job Benefit'
+                    prompt: 'Add Job Benefit'
+                    span: auto
+                    hidden: 0
+                    type: repeater
+                    form:
+                        fields:
+                            job_benefit:
+                                label: 'Job Benefit'
+                                span: full
+                                hidden: 0
+                                placeholder: 'Enter Job Benefit'
+                                type: text

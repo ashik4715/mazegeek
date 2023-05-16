@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.abouts::lang.plugin.name'
+    description: 'nishan.abouts::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-pencil-square-o
+    homepage: ''
+navigation:
+    aboutUs:
+        label: AboutUs
+        url: nishan/abouts/abouts
+        icon: icon-pencil-square-o

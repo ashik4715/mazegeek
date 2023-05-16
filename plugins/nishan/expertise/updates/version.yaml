@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table nishan_expertise_'
+    - builder_table_create_nishan_expertise_.php
+1.0.3:
+    - 'Updated table nishan_expertise_'
+    - builder_table_update_nishan_expertise_.php

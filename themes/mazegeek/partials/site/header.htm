@@ -1,0 +1,143 @@
+[builderList MazegeekList]
+modelClass = "Nishan\Mazegeek\Models\Mazegeek"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[viewBag]
+==
+<header
+    class="tenc-header
+           tenc-header--floating"
+    data-element="floating-header"
+>
+
+    {% set records = MazegeekList.records %}
+    {% set displayColumn = MazegeekList.displayColumn %}
+    {% set noRecordsMessage = MazegeekList.noRecordsMessage %}
+    {% set detailsPage = MazegeekList.detailsPage %}
+    {% set detailsKeyColumn = MazegeekList.detailsKeyColumn %}
+    {% set detailsUrlParameter = MazegeekList.detailsUrlParameter %}
+
+    <div class="container--relative">
+        {% for record in records %}
+
+        <a class="tenc-header__branding"
+           href="{{ 'home'|page }}">
+            <img
+                class="tenc-header__logo"
+                src="{{ record.mazegeek_logo.path }}"
+                alt="MAZEGEEK"
+            />
+        </a>
+        <div class="tenc-header__navigation
+                tenc-header__navigation--main">
+            <nav class="tenc-navigation">
+                {% for navigation in record.navigation %}
+                <a
+                    class="tenc-navigation__item "
+                    href="{{navigation.nav_url}}">
+                    {{navigation.nav_title}}
+                </a>
+
+                {% endfor %}
+                {% endfor %}
+
+                <a
+                    class="tenc-navigation__item color-primary fs-14"
+                    href=""
+                    onclick="Calendly.showPopupWidget('https://calendly.com/mazegeek/intro-call');return false;">Schedule
+                    a meeting</a>
+
+                <a class="tenc-navigation__item
+            button-gradient
+            button-gradient--simple
+
+            button-gradient--no-shadow
+            button-gradient--nav
+            "
+                   data-element="nav-button" href="#">
+                    <span class="color-white fs-17">Contact Us</span>
+                </a>
+
+            </nav>
+        </div>
+        <div class="tenc-header__burger">
+            <div class="tenc-burger"
+                 data-element="burger">
+                <div class="tenc-burger__label"></div>
+                <div class="tenc-burger__icon"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<header class="tenc-header">
+    <div class="continer--relative">
+        {% for record in records %}
+
+        <a class="tenc-header__branding"
+           href="{{ 'home'|page }}">
+            <img
+                class="tenc-header__logo"
+                src="{{ record.mazegeek_logo.path }}"
+                alt="mazegeek transparent"
+            />
+        </a>
+        <div class="tenc-header__navigation
+                tenc-header__navigation--main">
+            <nav class="tenc-navigation">
+                {% for navigation in record.navigation %}
+                <a
+                        class="tenc-navigation__item "
+                        href="{{navigation.nav_url}}">
+                    {{navigation.nav_title}}
+                </a>
+
+                {% endfor %}
+                {% endfor %}
+                <a
+                    class="tenc-navigation__item color-primary fs-14"
+                    href=""
+                    onclick="Calendly.showPopupWidget('https://calendly.com/mazegeek/intro-call');return false;">Schedule
+                    a meeting</a>
+                <a class="tenc-navigation__item
+            button-gradient
+            button-gradient--simple
+
+            button-gradient--no-shadow
+            button-gradient--nav
+            "
+                   data-element="nav-button" href="#">
+                    <span class="color-white fs-17">Contact Us</span>
+                </a>
+            </nav>
+        </div>
+        <div class="tenc-header__burger">
+            <div class="tenc-burger"
+                 data-element="burger">
+                <div class="tenc-burger__label"></div>
+                <div class="tenc-burger__icon"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="modal-container">
+    <div class="modal-background
+              modal-background--black">
+        <div class="modal
+                modal--full">
+            <div class="embed-container
+                  tenc-full-video-container">
+                <!-- here goes the video appended in modal.js -->
+            </div>
+            <div class="close
+                  close--on-full-modal"></div>
+        </div>
+    </div>
+</div>

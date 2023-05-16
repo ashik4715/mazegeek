@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.mazegeek::lang.plugin.name'
+    description: 'nishan.mazegeek::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-maxcdn
+    homepage: ''
+navigation:
+    mazegeek:
+        label: Mazegeek
+        url: nishan/mazegeek/mazegeek
+        icon: icon-maxcdn

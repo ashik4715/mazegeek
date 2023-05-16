@@ -1,0 +1,10 @@
+name: Services
+form: $/nishan/services/models/service/fields.yaml
+modelClass: Nishan\Services\Models\Service
+defaultRedirect: nishan/services/services
+create:
+    redirect: 'nishan/services/services/update/:id'
+    redirectClose: nishan/services/services
+update:
+    redirect: nishan/services/services
+    redirectClose: nishan/services/services

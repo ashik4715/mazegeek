@@ -1,0 +1,4 @@
+title: Mazegeek
+modelClass: Nishan\Mazegeek\Models\Mazegeek
+toolbar:
+    buttons: reorder_toolbar

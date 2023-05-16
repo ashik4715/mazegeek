@@ -1,0 +1,4 @@
+title: Abouts
+modelClass: Nishan\Abouts\Models\About
+toolbar:
+    buttons: reorder_toolbar

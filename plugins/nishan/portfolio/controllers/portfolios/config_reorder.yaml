@@ -1,0 +1,4 @@
+title: Portfolios
+modelClass: Nishan\Portfolio\Models\Portfolio
+toolbar:
+    buttons: reorder_toolbar

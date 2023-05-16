@@ -1,0 +1,10 @@
+name: Expertises
+form: $/nishan/expertise/models/expertise/fields.yaml
+modelClass: Nishan\Expertise\Models\Expertise
+defaultRedirect: nishan/expertise/expertises
+create:
+    redirect: 'nishan/expertise/expertises/update/:id'
+    redirectClose: nishan/expertise/expertises
+update:
+    redirect: nishan/expertise/expertises
+    redirectClose: nishan/expertise/expertises

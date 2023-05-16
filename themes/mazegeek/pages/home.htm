@@ -1,0 +1,868 @@
+title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[builderList ServiceList]
+modelClass = "Nishan\Services\Models\Service"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "service-details"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+
+[builderList PortfolioList]
+modelClass = "Nishan\Portfolio\Models\Portfolio"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "portfolio-details"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+
+[builderList ExpertiseList]
+modelClass = "Nishan\Expertise\Models\Expertise"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "description"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList TestimonialList]
+modelClass = "Nishan\Testimonials\Models\Testimonial"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList AboutList]
+modelClass = "Nishan\Abouts\Models\About"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList HomeList]
+modelClass = "Nishan\Homes\Models\Home"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[builderList MazegeekList]
+modelClass = "Nishan\Mazegeek\Models\Mazegeek"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+
+{% set records7 = MazegeekList.records %}
+{% set displayColumn7 = MazegeekList.displayColumn %}
+{% set noRecordsMessage7 = MazegeekList.noRecordsMessage %}
+{% set detailsPage7 = MazegeekList.detailsPage %}
+{% set detailsKeyColumn7 = MazegeekList.detailsKeyColumn %}
+{% set detailsUrlParameter7 = MazegeekList.detailsUrlParameter %}
+
+{% put meta %}
+{% for record in records7 %}
+{% if loop.index == 1 %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endput %}
+
+{% put styles %}
+<link href="{{ 'assets/css/module/flat-button.css'|theme }}" rel="stylesheet">
+<link href="{{ 'assets/css/module/stats.css'|theme }}" rel="stylesheet">
+<link href="{{ 'assets/css/module/cas-studies.css'|theme }}" rel="stylesheet">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .techs .tech {
+        border: 0px solid #f3f3f3;
+        box-shadow: 2px 3px 22px rgba(46, 61, 73, .15);
+        border-radius: 10px;
+        background: white;
+    }
+
+    .industry ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .industry ul li {
+        border-radius: 6px;
+        /*cursor: pointer;*/
+        text-align: center;
+        position: relative;
+        float: left;
+        display: block;
+        margin-right: 1.69491525%;
+        width: 19.49152542%;
+        height: 7.5rem;
+        color: #495057;
+
+    }
+
+    @media only screen and (max-width: 767px) {
+        .industry ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .industry ul li {
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            float: left;
+            display: block;
+            margin-right: 0%;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 6rem;
+            color: #495057;
+
+        }
+    }
+
+    .industry ul li:nth-child(5n+1) {
+        border-top: 1rem solid #a951ed;
+    }
+
+    .industry ul li:nth-child(5n+2) {
+        border-top: 1rem solid #ff8bab;
+    }
+
+    .industry ul li:nth-child(5n+3) {
+        border-top: 1rem solid #ffae0c;
+    }
+
+    .industry ul li:nth-child(5n+4) {
+        border-top: 1rem solid #02ccba;
+    }
+
+    .industry ul li:nth-child(5n+5) {
+        border-top: 1rem solid #ff5483;
+    }
+
+    .school-card {
+        background-color: #fff;
+        box-shadow: 2px 3px 22px rgba(46, 61, 73, .15);
+        transition: box-shadow .3s;
+    }
+
+    .blog-list .blog-big .blog-content {
+        border: 0px solid #bdbdbd;
+        border-radius: 8px;
+    }
+
+    .blog-list .blog-big:hover .blog-content {
+        border: 0px solid #34b57c;
+    }
+
+    .blog-list .blog-big .blog-content::before {
+        border-radius: 8px;
+    }
+
+    a:not([href]):not([tabindex]) {
+        color: #24272a;
+        text-decoration: none;
+    }
+
+    .tabs a.categories-list-filter-btn-active, .tabs a:hover {
+        border-bottom-color: #24272a;
+        color: #24272a;
+        text-decoration: none;
+    }
+
+    .tabs a {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 89%;
+    }
+
+    .top-banner {
+        height: 440px;
+    }
+
+    @media (min-width: 768px) {
+        .top-banner {
+            height: 350px;
+        }
+
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+            width: 86%;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+
+        .top-banner {
+            height: 350px;
+        }
+
+        .tenc-intro-main__buttons {
+            -ms-flex-direction: column;
+            flex-direction: column;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+
+            align-items: center;
+        }
+    }
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .more-service {
+        text-decoration: none
+    }
+
+</style>
+<style>
+    .hs-button {
+        background: linear-gradient(90deg, #2ab57d, #0a7349);
+    }
+</style>
+{% endput %}
+
+<main role="main" id="main">
+
+    {% set records6 = HomeList.records %}
+    {% set displayColumn6 = HomeList.displayColumn %}
+    {% set noRecordsMessage6 = HomeList.noRecordsMessage %}
+    {% set detailsPage6 = HomeList.detailsPage %}
+    {% set detailsKeyColumn6 = HomeList.detailsKeyColumn %}
+    {% set detailsUrlParameter6 = HomeList.detailsUrlParameter %}
+
+    <section class="tenc-intro">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper">
+                {% for record in records6 %}
+                {% for each in record.slogan %}
+                <div class="tenc-intro-main top-banner">
+                    <h1 class="tenc-intro-main__title fw-600 lh-3 text-center">
+                            <span class="tenc-intro-main__title-part">
+                              {{each.slogan_main}}
+                            </span>
+                    </h1>
+                    <div class="tenc-intro-main__content text-center">
+                        <h2 class="tenc-intro-main__content-copy fs-21 color-white">
+                            {{each.sub_slogan}}
+                        </h2>
+                    </div>
+                    <div class="tenc-intro-main__buttons">
+                        <div class="tenc-intro-main__button">
+                            <a class="button-gradient
+                      button-gradient--simple
+                      button-gradient--intro
+                      button-gradient--no-shadow
+                      button-gradient--big-font
+                      tenc-contact-modal__open" href=""
+                               onclick="Calendly.showPopupWidget('https://calendly.com/mazegeek/intro-call');return false;">
+                                <span class="color-white">{{each.schedule}}</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="logos container">
+                        <ul class="list-unstyled d-flex justify-content-between row mb-0">
+                            {% for logos in each.dev_partner %}
+                            <li class="col-auto my-2">
+                                <img src="{{ logos.dev_logo|media }}" alt="vinndo" height="25" width="100">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        {% for record in records6 %}
+        <video
+                data-mp4="{{record.mazegeek_video.path}}"
+                data-webm="{{record.mazegeek_video.path}}"
+                class="tenc-intro__video"
+                data-element="main-video"
+                autoplay
+                loop
+                muted>
+        </video>
+        {% endfor %}
+    </section>
+
+    {% set records1 = ServiceList.records %}
+    {% set displayColumn1 = ServiceList.displayColumn %}
+    {% set noRecordsMessage1 = ServiceList.noRecordsMessage %}
+    {% set detailsPage1 = ServiceList.detailsPage %}
+    {% set detailsKeyColumn1 = ServiceList.detailsKeyColumn %}
+    {% set detailsUrlParameter1 = ServiceList.detailsUrlParameter %}
+
+    {% set records2 = PortfolioList.records %}
+    {% set displayColumn2 = PortfolioList.displayColumn %}
+    {% set noRecordsMessage2 = PortfolioList.noRecordsMessage %}
+    {% set detailsPage2 = PortfolioList.detailsPage %}
+    {% set detailsKeyColumn2 = PortfolioList.detailsKeyColumn %}
+    {% set detailsUrlParameter2 = PortfolioList.detailsUrlParameter %}
+
+    {% set records3 = ExpertiseList.records %}
+    {% set displayColumn3 = ExpertiseList.displayColumn %}
+    {% set noRecordsMessage3 = ExpertiseList.noRecordsMessage %}
+    {% set detailsPage3 = ExpertiseList.detailsPage %}
+    {% set detailsKeyColumn3 = ExpertiseList.detailsKeyColumn %}
+    {% set detailsUrlParameter3 = ExpertiseList.detailsUrlParameter %}
+
+    {% set records4 = TestimonialList.records %}
+    {% set displayColumn4 = TestimonialList.displayColumn %}
+    {% set noRecordsMessage4 = TestimonialList.noRecordsMessage %}
+    {% set detailsPage4 = TestimonialList.detailsPage %}
+    {% set detailsKeyColumn4 = TestimonialList.detailsKeyColumn %}
+    {% set detailsUrlParameter4 = TestimonialList.detailsUrlParameter %}
+
+    {% set records5 = AboutList.records %}
+    {% set displayColumn5 = AboutList.displayColumn %}
+    {% set noRecordsMessage5 = AboutList.noRecordsMessage %}
+    {% set detailsPage5 = AboutList.detailsPage %}
+    {% set detailsKeyColumn5 = AboutList.detailsKeyColumn %}
+    {% set detailsUrlParameter5 = AboutList.detailsUrlParameter %}
+
+    <section class="tenc-stats-main">
+        <div class="continer">
+            <h2 class="h3 fw-300 pt-80 text-center color-black">About MazeGeek</h2>
+            <div class="tenc-stats-main__heading">
+
+                {% for record in records5 %}
+                <p class="tenc-stats-main__heading__content">
+                    {{record.details}}
+                </p>
+                {% endfor %}
+
+                <div class="tenc-stats-main-how-we-work-button">
+                    <a href="{{ 'about'|page }}"
+                       class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">
+                        About us
+                    </a>
+                </div>
+            </div>
+
+            {% for record in records5 %}
+            <div class="tenc-stats-main__main-stats-box__wrapper pb-0">
+                {% for each in record.title %}
+                <div class="tenc-stats-main__main-stats-box">
+                    <div>
+                        <img class="tenc-stats-main__main-stats-box__icon"
+                             src="{{each.about_icon|media}}"
+                             alt="happy-clients-icon">
+                    </div>
+                    <div>
+                        <span class="tenc-stats-main__main-stats-box__number">{{each.amount}}</span><br>
+                        <span class="tenc-stats-main__main-stats-box__copy">{{each.label}}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            <div class="tenc-stats-main__other-stats
+                tenc-animated--fadeUp
+                tenc-animated--delay2">
+
+                <div class="tenc-stats-main__other-stats__item">
+        <span class="tenc-stats-main__other-stats__item__copy
+                     tenc-stats-main__other-stats__item__copy--color">200+</span>
+                    <span class="tenc-stats-main__other-stats__item__copy">Daily standups</span>
+                </div>
+
+                <div class="tenc-stats-main__other-stats__item">
+        <span class="tenc-stats-main__other-stats__item__copy
+                     tenc-stats-main__other-stats__item__copy--color">2k+</span>
+                    <span class="tenc-stats-main__other-stats__item__copy">Commits</span>
+                </div>
+
+                <div class="tenc-stats-main__other-stats__item">
+        <span class="tenc-stats-main__other-stats__item__copy
+                     tenc-stats-main__other-stats__item__copy--color">20K+</span>
+                    <span class="tenc-stats-main__other-stats__item__copy">App Downloads</span>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="service_section" style="background-color: #fff;">
+        <div class="container-fluid">
+            <h2 class="h3 fw-300 pb-0 pb-md-0 pt-5 text-center">Services</h2>
+            <div class="inner_section">
+                <div class="row">
+
+                    {% for record in records1 %}
+                    <div class="tenc-how-we-work-transparency__content-boxes-item
+                    tenc-how-we-work-transparency__content-boxes-item1                    tenc-animated--fadeUpSequence">
+                        <div class="tenc-how-we-work-transparency__content-boxes-item__header">
+                            <img class="tenc-how-we-work-transparency__content-boxes-item__icon"
+                                 src="{{ record.icon.path }}"
+                                 alt="Transparency icon">
+                            <h4 class="tenc-how-we-work-heading--tertiary tenc-how-we-work-transparency__heading">
+                                {% spaceless %}
+                                {% if detailsPage1 %}
+                                <a href="{{ detailsPage1|page({ (detailsUrlParameter1): attribute(record, detailsKeyColumn1) }) }}">
+                                    {% endif %}
+
+                                    {{ record.name }}
+
+                                    {% if detailsPage1 %}
+                                </a>
+                                {% endif %}
+                                {% endspaceless %}
+                            </h4>
+                        </div>
+                        <p class="tenc-how-we-work-copy
+                    tenc-how-we-work-copy--small">{{ record.description }}</p>
+                    </div>
+                    {% else %}
+                    <div class="no-data">{{ noRecordsMessage1 }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <a href="https://mazegeek.com/services"
+                       class="more-service button-gradient button-gradient--simple button-gradient--empty button-gradient--no-shadow button-gradient--big-font button-gradient--dark-text more-service collapsed">
+                        Show More
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bgc-gray-4 expertise pt-110 pb-5">
+        <div class="container">
+            {% for record in records3 %}
+
+            <div class="row">
+                {% spaceless %}
+                {% if detailsPage3 %}
+
+                {% endif %}
+                <p class="col-12 col-lg-10 m-auto text-center">
+                    {{ record.description }}
+                </p>
+
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-12 col-lg-12 pt-5 industry">
+                    <h4 class="pb-4 text-center color-black">Industries</h4>
+
+                    <ul style="" class="school-list"><!---->
+                        {% if record %}
+                        {% for industries in record.industries %}
+                        <li style="" class="school-card text-center ng-star-inserted">
+                            <h5 class="fw-600 mt-4 pl-2 pr-2">{{ industries.industries_item }}</h5>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+
+                </div>
+                <div class="col-12 col-lg-12 col-xl-12 pt-5">
+                    <h4 class="pb-4 text-center color-black">Technologies</h4>
+                    <div class="row techs techs-p-30">
+                        {% if record %}
+                        {% for technologies in record.technologies %}
+                        <div class="col-6 col-md-4 col-lg-2 mb-5 tech-wrap">
+                            <a
+                                    class="tech d-flex flex-column justify-content-center align-items-center">
+                                <img src="{{ technologies.bw_icon|media }}"
+                                     class="img-fluid img-main" alt="tech">
+                                <img src="{{ technologies.color_icon|media }}"
+                                     class="img-fluid img-second" alt="tech">
+
+                                <p class="mb-0 hover-hide">{{ technologies.technology_item }}</p>
+                                <p class="hover-show mb-0">{{ technologies.technology_item }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                    </div>
+                    <!--<div class="text-center">-->
+                    <!--<a href="#" class="button-gradient-->
+                    <!--button-gradient&#45;&#45;simple-->
+                    <!--button-gradient&#45;&#45;empty-->
+                    <!--button-gradient&#45;&#45;no-shadow-->
+                    <!--button-gradient&#45;&#45;big-font-->
+                    <!--button-gradient&#45;&#45;dark-text">-->
+                    <!--View All Technologies-->
+                    <!--</a>-->
+                    <!--</div>-->
+
+                    <!--<div class=" text-center"><a class="btn btn-t" href="#" target="_blank">View All</a></div>-->
+                </div>
+            </div>
+
+            {% endspaceless %}
+            {% else %}
+            {% endfor %}
+        </div>
+    </section>
+
+
+    <section class="bgc-gray-5 tenc-case-studies--simple-wrapper">
+        <div class="continer">
+            <h2 class="h2 fw-300 pb-4 pb-md-5 text-center color-black">Our Work</h2>
+
+            <div class="tenc-case-studies--simple">
+                {% for record in records2 %}
+
+                <div class="tenc-case-studies--simple__item tenc-case-studies--simple__shortlist">
+                    {% spaceless %}
+                    {% if detailsPage2 %}
+                    <a href="{{ detailsPage2|page({ (detailsUrlParameter2): attribute(record, detailsKeyColumn2) }) }}"
+                       style="color: black;">
+                        <div class="tenc-case-studies--simple__item-background
+                        tenc-case-studies--simple__item-background--adshares">
+                            <img class="app-preview right lazyload"
+                                 src="{{ record.icon.path }}"
+                                 srcset="{{ record.icon.path }} 2x,
+                                         {{ record.icon.path }} 3x"
+                                 alt="Adshares">
+                            <div class="tint"></div>
+                            <span class="tenc-arrow
+                           tenc-arrow--white"></span>
+                        </div>
+                    </a>
+                    {% endif %}
+                    <a>
+                        <h4 class="tenc-case-studies--simple__item-app-name mb-2 color-black">{{ record.name }}</h4>
+                    </a>
+                    {% if detailsPage2 %}
+
+                    {% endif %}
+                    {% endspaceless %}
+                    <div class="mb-3">
+                        {% if record %}
+                        {% for category in record.category %}
+                        <span class="tenc-simple-portfolio-entry-preheading color-primary">{{ category.category_item }}</span>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <p class="tenc-copy">{{ record.description }}</p>
+
+                </div>
+
+                {% else %}
+                <div class="no-data">{{ noRecordsMessage2 }}</div>
+                {% endfor %}
+
+            </div>
+            <div class="tenc-case-studies--simple-more-button">
+                <a href="https://mazegeek.com/works"
+                   class="button-gradient
+                button-gradient--simple
+                button-gradient--empty
+                button-gradient--no-shadow
+                button-gradient--big-font
+                button-gradient--dark-text">
+                    View all projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bgc-gray-5 pt-80 pb-80" style="display: none">
+
+        <div class="container mb-5">
+            <h2 class="h1 pb-4 pb-md-5 text-center color-black">Portfolio</h2>
+            <div class="row">
+                <div class="col-12 col-lg-12 tabs">
+                    <div class="m-auto tabs">
+
+                        <a class="categories-list-filter-btn-active" data-filter="all">All</a>
+
+                        <a data-filter=".category-en-a">Development Partner</a>
+                        <a data-filter=".category-en-b">Socialmedia</a>
+                        <a data-filter=".category-en-c">Team Extension</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container blog-list">
+
+            <div class="row" id="mix-wrapper">
+
+
+                <a href="#" data-order="1"
+                   class="col-12 col-lg-4 blog blog-big flex-column mix-target category-en-c">
+                    <div class="blog-content"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog-1.png');">
+                        <hr>
+                        <h3 class="fs-24 fw-400 color-white">VINNDO</h3>
+                        <h4 class="fw-400">The biggest automotive network</h4>
+                    </div>
+                </a>
+                <a href="#" data-order="2"
+                   class="col-12 col-lg-4 blog blog-big flex-column mix-target category-en-a">
+                    <div class="blog-content"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog-2.png');">
+                        <hr>
+                        <h3 class="fs-24 fw-400 color-white">SCOPEPRICE</h3>
+                        <h4 class="fw-400">The biggest automotive network</h4>
+                    </div>
+                </a>
+                <a href="#" data-order="3"
+                   class="col-12 col-lg-4 blog blog-big flex-column mix-target category-en-a">
+                    <div class="blog-content"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog-3.png');">
+                        <hr>
+                        <h3 class="fs-24 fw-400 color-white">PARTS CARGO</h3>
+                        <h4 class="fw-400">The biggest automotive network</h4>
+                    </div>
+                </a>
+                <a href="#" data-order="4"
+                   class="col-12 col-lg-4 blog blog-big flex-column mix-target category-en-b">
+                    <div class="blog-content"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog-1.png');">
+                        <hr>
+                        <h3 class="fs-24 fw-400 color-white">POSTKNOCK</h3>
+                        <h4 class="fw-400">The biggest automotive network</h4>
+                    </div>
+                </a>
+                <a href="#" data-order="5"
+                   class="col-12 col-lg-4 blog blog-big flex-column mix-target category-en-c">
+                    <div class="blog-content"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog-2.png');">
+                        <hr>
+                        <h3 class="fs-24 fw-400 color-white">Vinndo</h3>
+                        <h4 class="fw-400">The biggest automotive network</h4>
+                    </div>
+                </a>
+                <a href="#" data-order="6"
+                   class="col-12 col-lg-4 blog blog-big flex-column mix-target category-en-a">
+                    <div class="blog-content"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog-3.png');">
+                        <hr>
+                        <h3 class="fs-24 fw-400 color-white">Vinndo</h3>
+                        <h4 class="fw-400">The biggest automotive network</h4>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <div class="tenc-services-testimonials__wave-wrapper">
+
+        <div class="bgc-gray-4 tenc-testimonial">
+            <div class="container mb-5 pt-80">
+                <h2 class="h2 fw-300 pb-4 pb-md-5 text-center color-black">Testimonial</h2>
+            </div>
+            <div class="continer">
+
+                <div class="tenc-testimonial-small">
+
+                    {% for record in records4 %}
+
+                    <div class="tenc-testimonial-small__box">
+                        {% for each in record.description %}
+
+                        <img
+                                class="tenc-testimonial-small__photo lazyload"
+                                src="{{ each.photo|media }}"
+                                alt="Gareth N. Genner Photo"
+                        />
+                        {% endfor %}
+
+                        <p class="tenc-testimonial__client">{{ record.name }}</p>
+                        <p class="tenc-testimonial__company">{{ record.designation }} <span class="tenc-testimonial__company
+                   tenc-testimonial__company--color">
+                                <a href="{{ record.website_link }}">{{ record.website_title }}</a>
+                            </span>
+                        </p>
+                        {% for each in record.description %}
+
+                        <div class="tenc-testimonial-small__quote-wrapper">
+                            <img
+                                    class="tenc-testimonial-small__quote-icon"
+                                    src="themes/mazegeek/assets/wp-content/themes/thegem/dist/images/quote-purple.svg"
+                                    alt="Quote"
+                            />
+                            <div>
+                                <p class="tenc-testimonial__quote-copy
+                  tenc-testimonial__quote-copy--small">
+                                    {{ each.quote }}
+                                </p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    {% else %}
+                    <div class="no-data">{{ noRecordsMessage4 }}</div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class=" pt-80 pb-80">
+        <div class="container blog-list">
+            <h2 class="h2 fw-300 pb-4 pb-md-5 text-center color-black">Blogs</h2>
+            <div class="row">
+
+                {% for record in records6 %}
+                {% for each in record.blogs %}
+                <a href="{{ each.blog_url }}"
+                   class="col-12 col-lg-4 blog blog-big d-flex flex-column">
+                    <div class="blog-content lazyload" data-bg="{{ each.blog_photo|media }}"
+                         style="background-image: url('https://mazegeek.com/assets/images/blog/blog1.jpeg');">
+                        <hr>
+                        <h4>{{ each.blog_title }}</h4>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="text-center">
+                <a href="https://blog.mazegeek.com/" class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">
+                    View All Blogs
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <section class="bgc-gray-4 partners pt-80 pb-80">
+        <div class="container mb-4">
+            <h2 class="h3 fw-300 pb-2 pb-md-4 text-center strong color-black">We are Partners with</h2>
+
+        </div>
+        <div class="container d-flex flex-wrap justify-content-center py-2">
+
+            {% for record in records6 %}
+
+            {% for each in record.partner %}
+            <div class="partner mx-2 mx-lg-4 mx-md-4 my-3">
+                <a href="{{ each.partner_url }}" target="_blank">
+                    <img alt="iso" src="{{each.partner_logo|media}}" class="lazyload"
+                         width="150"/>
+                </a>
+            </div>
+            {% endfor %}
+            {% endfor %}
+
+        </div>
+    </section>
+
+</main>
+
+{% put scripts %}
+
+{% endput %}

@@ -1,0 +1,257 @@
+[builderList MazegeekList]
+modelClass = "Nishan\Mazegeek\Models\Mazegeek"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[viewBag]
+==
+<footer id="footer">
+    <div class="cookies py-5">
+        <button type="button" class="btn btn-cross cross"></button>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-9 text-center text-sm-left mb-3 mb-sm-0">
+                    <p class="mb-0 text-center text-sm-left color-gray-2 fs-18">This site uses cookies. By using our
+                        site, you agree to our <a href="#" class="underline color-gray-1">Terms and Privacy
+                            Policy</a></p>
+                </div>
+                <div class="col-12 col-sm-3 text-center text-sm-right">
+                    <button class="btn btn-primary agree">Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<button id="scroll-to-top" title="Go to top" class="btn btn-link">-->
+    <!--<i class="fa fa-chevron-up fs-21" aria-hidden="true"></i>-->
+    <!--</button>-->
+
+    {% set records = MazegeekList.records %}
+    {% set displayColumn = MazegeekList.displayColumn %}
+    {% set noRecordsMessage = MazegeekList.noRecordsMessage %}
+    {% set detailsPage = MazegeekList.detailsPage %}
+    {% set detailsKeyColumn = MazegeekList.detailsKeyColumn %}
+    {% set detailsUrlParameter = MazegeekList.detailsUrlParameter %}
+
+    <section class="contact-section pt-80 pt-0 mt-5">
+        <div class="container">
+            <div class="contact-title centered">
+                <div class="h3 fw-300 color-black ">Get in Touch</div>
+                <p class="mb-5">We would love to hear from you. Please fill out the form below and we will reach out to you.</p>
+            </div>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <img src="{{ 'themes/mazegeek/assets/images/mazeCenterLogo.svg'}}" alt="mazegeek" class="mb-3">
+
+
+                    <p class="color-black w-75">We have the talent you need to create innovative software solutions. Choose MazeGeek as your
+                        partner and we will dedicate ourselves to delivering the results you want.</p>
+                    <div class="socials d-flex ">
+                        <a href="https://www.facebook.com/mazegeek/" target="_blank" class="social"><i class="fa fa-facebook fs-21" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/company/mazegeek/" target="_blank" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/mazegeek" target="_blank" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="phone my-3"><p class="color-primary strong mb-2">USA</p>
+                        <p class="strong mb-2">MazeGeek, Inc.</p>
+                        <p class=" mb-2"> 3601 36th Ave. Astoria, NY, 11106</p>
+                        <p class="mb-2">+1 845 271 1712</p>
+                    </div>
+                    <hr class="ml-0 w-75" >
+                    <div class="phone my-3"><p class="color-primary strong mb-2">Bangladesh</p>
+                        <p class="strong mb-2">MazeGeek Technologies BD Ltd.</p>
+                        <p class="mb-2">House:105, Road:13/A, Block: C, Banani,
+                            Dhaka-1213</p>
+                        <p class="mb-2">+880 1671010131</p>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12 contact-colmun">
+                    <div class="contact-area">
+                        <!--[if lte IE 8]>
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                        <![endif]-->
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                portalId: "5288045",
+                                formId: "0d9bee21-707a-46a0-916e-631240f81696"
+                            });
+                        </script>
+                        <form id="contact-form" name="contact_form" class="default-form" style="display: none">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-6 col-xs-12">
+                                    <input type="text" name="form_name" value="" placeholder="Full Name" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <input type="email" name="form_email" value="" placeholder="Email Address" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <textarea placeholder="Message" name="form_message" required="" aria-required="true"></textarea>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#" class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">
+                                    Send Message
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bgc-footer-2 pt-80 pb-80">
+        <div class="container">
+            <div class="row ">
+                <div class="col-auto col-lg-3">
+
+                    <h4 class="mb-4 color-black">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        {% for record in records %}
+                            {% for quick in record.footer %}
+                                {% for each in quick.quick_links %}
+                                <li><a href="{{quick.quick_url}}">{{each.quick_items}}</a></li>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+
+                </div>
+                <div class="col-lg-2">
+                    <h4 class="mb-4 color-black">Services</h4>
+
+                    <ul class="list-unstyled">
+                        {% for record in records %}
+                            {% for quick in record.footer %}
+                                {% for each in quick.services_links %}
+                                <li><a href="{{quick.service_url}}">{{each.services_items}}</a></li>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+
+                </div>
+                <div class="col-auto col-lg-3 d-none">
+                    <h4 class="mb-4 color-black">Case Studies</h4>
+
+                    <ul class="list-unstyled">
+                        <li><a class="color-black">Vinndo</a></li>
+                        <li><a class="color-black">Maxxecom</a></li>
+                        <li><a class="color-black">Scopeprice</a></li>
+                        <li><a class="color-black">Webtweaker</a></li>
+                        <li><a class="color-black">Partscargo</a></li>
+                        <li><a class="color-black">Postnock</a></li>
+                        <li><a class="color-black">Textnock</a></li>
+                        <li><a class="color-black">Partzroot</a></li>
+                        <li><a class="color-black">Suzuki bd</a></li>
+                        <li><a class="color-black">Jani ebong janai</a></li>
+                        <li><a class="color-black">Mobile Bondhu</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-10 col-lg-6 column-2">
+                    <h4 class="mb-4">Top Technologies</h4>
+                    <ul class="list-unstyled">
+                        {% for record in records %}
+                            {% for quick in record.footer %}
+                                {% for each in quick.technology_links %}
+                                <li><a href="{{quick.technology_url}}">{{each.technology_items}}</a></li>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="subscribe" id="subscribe" style="display: none">
+
+            </div>
+        </div>
+    </section>
+    <section class="lets_connect">
+        <div class="container">
+            <div class="">
+                {% for record in records %}
+                {% for quick in record.footer %}
+                {% for each in quick.animation %}
+                <h2 class="h1 pb-2 pb-md-4 text-center strong color-white"><span data-aos="zoom-in">{{each.animation1}}</span> <span
+                        data-aos="zoom-in" data-aos-delay="400">{{each.animation2}}</span></h2>
+
+                {% endfor %}
+                <div class="row">
+                    <div class="col-sm-4 m-auto">
+                        <a href="#" class="button-gradient
+                      button-gradient--simple
+                      button-gradient--intro
+                      button-gradient--no-shadow
+                      button-gradient--big-font
+                  " data-aos="fade-up" data-aos-easing="ease" data-aos-delay="500">
+                            <span class="color-white"> {{quick.partnership}}</span>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="bgc-gray-5 partners pt-80 pb-80" style="display: none">
+        <div class="container mb-4">
+            {% for record in records %}
+            {% for quick in record.footer %}
+            {% for each in quick.animation %}
+            <h2 class="h1 pb-2 pb-md-4 text-center strong color-white"><span data-aos="zoom-in">{{each.animation1}}</span> <span
+                    data-aos="zoom-in" data-aos-delay="400">{{each.animation2}}</span></h2>
+
+            {% endfor %}
+            <div class="row">
+                <div class="col-sm-4 m-auto">
+                    <a href="#" class="button-gradient
+                      button-gradient--simple
+                      button-gradient--intro
+                      button-gradient--no-shadow
+                      button-gradient--big-font
+                  " data-aos="fade-up" data-aos-easing="ease" data-aos-delay="500">
+                        <span class="color-white"> {{quick.partnership}}</span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+
+    </section>
+    <section class="container">
+        <div class="row d-flex align-items-center flex-row-reverse py-3 fs-12">
+            <div class="col-12 col-sm-auto pb-4 pb-sm-0 d-flex  align-items-center">
+                {% for record in records %}
+                {% for each in record.footer %}
+
+                <div class="fs-14 pr-3">Made with <i class="fa fa-heart-o color-error" aria-hidden="true"></i> {{each.with_love|raw}}
+                </div>
+                <img src="{{ record.footer_icon.path }} " width="40px" height="40">
+
+
+            </div>
+            <div class="col-12 col-sm color-black">
+                {{each.copyright}}
+                <span class="mx-2">|</span>
+                <a href="{{each.policy_url}}" target="_blank">{{each.policy}}</a>
+
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+</footer>

@@ -1,0 +1,4 @@
+title: Homes
+modelClass: Nishan\Homes\Models\Home
+toolbar:
+    buttons: reorder_toolbar

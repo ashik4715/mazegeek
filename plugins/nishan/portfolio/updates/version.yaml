@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - update_nishan_portfolio
+    - migration102.php
+1.0.3:
+    - update_nishan_portfolio
+    - migration103.php
+1.0.4:
+    - update_nishan_portfolio
+    - migration104.php
+1.0.5:
+    - update_nishan_portfolio
+    - migration105.php
+1.0.6:
+    - 'Updated table nishan_portfolio_'
+    - builder_table_update_nishan_portfolio_.php

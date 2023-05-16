@@ -1,0 +1,6 @@
+columns:
+    description:
+        label: 'nishan.expertise::lang.plugin.description'
+        type: text
+        searchable: true
+        sortable: true

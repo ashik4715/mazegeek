@@ -1,0 +1,10 @@
+name: Homes
+form: $/nishan/homes/models/home/fields.yaml
+modelClass: Nishan\Homes\Models\Home
+defaultRedirect: nishan/homes/homes
+create:
+    redirect: 'nishan/homes/homes/update/:id'
+    redirectClose: nishan/homes/homes
+update:
+    redirect: nishan/homes/homes
+    redirectClose: nishan/homes/homes

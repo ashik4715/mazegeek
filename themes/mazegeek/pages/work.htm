@@ -1,0 +1,324 @@
+title = "WORK"
+url = "/work"
+layout = "default"
+description = "In this page you will find about the Work Progress of Mazegeek BD limited"
+is_hidden = 0
+
+[builderList]
+modelClass = "Nishan\Portfolio\Models\Portfolio"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "portfolio-details"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% put styles %}
+
+<!-- Styles -->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<!-- Module Styles -->
+
+
+<link rel="stylesheet" type="text/css" href="https://mazegeek.com/css/module.css">
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+
+
+<!-- Mazegeek Style -->
+
+
+<link rel="stylesheet" type="text/css" href="https://mazegeek.com/css/mazegeek.css">
+
+<link href="https://mazegeek.com/assets/css/module/cas-studies.css" rel="stylesheet">
+<style>
+    .tenc-intro--how-we-work {
+        background: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.90) 35%, rgba(1, 32, 17, 0.8) 70%, rgba(1, 32, 17, 0.6)), url({{ 'assets/images/mgbanner/portfolio_banner.jpg' |theme }});
+    }
+</style>
+<style>
+    .tenc-intro {
+        /* height: 100vh; */
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    @media  screen and (min-width: 300px) and (max-width: 767px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+    @media  screen and (min-width: 768px) and (max-width: 4000px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+</style>
+<style>
+    .tenc-intro-main__wrapper {
+        max-width: 100%;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 90%;
+    }
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+    @media  screen and (min-width: 1200px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+        }
+
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+    }
+
+
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+
+    .more-service{text-decoration: none}
+
+</style>
+<style>
+
+    .blog-list .blog-big .blog-content{
+        border: 0px solid #bdbdbd;
+        border-radius: 8px;
+    }
+    .blog-list .blog-big:hover .blog-content {
+        border: 0px solid #34b57c;
+    }
+    .blog-list .blog-big .blog-content::before{
+        border-radius: 8px;
+    }
+
+    /*h4 {*/
+    /*margin: 15px 0 5px;*/
+    /*}*/
+    /*button {*/
+    /*padding: 8px 15px;*/
+    /*}*/
+    /*#mix-wrapper {*/
+    /*list-style: none;*/
+    /*padding: 0;*/
+    /*}*/
+    /*#mix-wrapper li {*/
+    /*}*/
+    a:not([href]):not([tabindex]) {
+        color: #9E9E9E;
+        text-decoration: none;
+    }
+
+    .tabs a.categories-list-filter-btn-active, .tabs a:hover {
+        border-bottom-color: #24272a;
+        color: #24272a;
+        text-decoration: none;
+    }
+
+    .tabs a{
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    /*tabWithoutJs*/
+
+
+</style>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    .product-thumb {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        /*background-color: #f2f4f8;*/
+        /*margin-bottom: 10px;*/
+        margin-right: 0;
+        height: 125px;
+        width: auto;
+
+    }
+
+    .product-thumb img {
+        object-fit: scale-down;
+    }
+</style>
+{% endput %}
+
+{% set records = builderList.records %}
+{% set displayColumn = builderList.displayColumn %}
+{% set noRecordsMessage = builderList.noRecordsMessage %}
+{% set detailsPage = builderList.detailsPage %}
+{% set detailsKeyColumn = builderList.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+{% put meta %}
+{% for record in records %}
+{% if loop.index == 1 %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endput %}
+
+<main role="main" id="main">
+
+    <section class="tenc-intro tenc-intro--how-we-work">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper
+                tenc-intro-main__wrapper--short">
+                <div class="tenc-intro-main mt-4">
+
+                    <h1 class="h2 fw-600 tenc-intro-main__title text-center color-white">
+        <span class="tenc-intro-main__title-part">
+          Our Work
+        </span>
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bgc-gray-5 tenc-case-studies--simple-wrapper">
+        <div class="continer">
+
+            <div class="tenc-case-studies--simple">
+                {% for record in records %}
+
+                <div class="tenc-case-studies--simple__item tenc-case-studies--simple__shortlist">
+                    {% spaceless %}
+                    {% if detailsPage %}
+                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}" style="color: black;">
+                        <div class="tenc-case-studies--simple__item-background
+                        tenc-case-studies--simple__item-background--adshares">
+                            <img class="app-preview right"
+                                 src="{{ record.icon.path }}"
+                                 srcset="{{ record.icon.path }} 2x,
+                                         {{ record.icon.path }} 3x"
+                                 alt="Adshares">
+                            <div class="tint">
+                            </div>
+                            <span class="tenc-arrow
+                           tenc-arrow--white">
+                            </span>
+                        </div>
+                    </a>
+
+                    {% endif %}
+
+                    <a style="color: black">
+                        <h4 class="tenc-case-studies--simple__item-app-name mb-2">
+                            {{ record.name }}
+                        </h4>
+                    </a>
+
+                    {% if detailsPage %}
+
+                    {% endif %}
+                    {% endspaceless %}
+
+                    <div class="mb-3">
+                        {% if record %}
+                        {% for category in record.category %}
+                            <span class="tenc-simple-portfolio-entry-preheading color-primary">{{ category.category_item }}</span>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <p class="tenc-copy">{{ record.description }}</p>
+                </div>
+
+                {% else %}
+                <div class="no-data">{{ noRecordsMessage }}</div>
+                {% endfor %}
+
+            </div>
+            <div class="tenc-case-studies--simple-more-button" style="display: none">
+                <a href="#"
+                   class="button-gradient
+                button-gradient--simple
+                button-gradient--empty
+                button-gradient--no-shadow
+                button-gradient--big-font
+                button-gradient--dark-text">
+                    Load more ....
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</main>
+
+{% put scripts %}
+
+{% endput %}

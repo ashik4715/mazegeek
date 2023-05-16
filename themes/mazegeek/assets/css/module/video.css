@@ -1,0 +1,167 @@
+/*9247 - 9411*/
+
+.tenc-custom-video {
+    position: relative
+}
+
+.tenc-custom-video__heading {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-custom-video__heading {
+        font-size: 30px;
+        font-size: 3rem
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-custom-video__heading {
+        font-size: 36px;
+        font-size: 3.6rem
+    }
+}
+
+.tenc-custom-video__video-wrapper {
+    position: relative;
+    background: #000
+}
+
+.tenc-custom-video__controls {
+    background: rgba(0, 0, 0, .4);
+    bottom: 0;
+    display: none;
+    left: 0;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    width: 100%
+}
+
+.tenc-custom-video__content {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%
+}
+
+.tenc-custom-video__pause {
+    background: none;
+    border-radius: 100%;
+    border: 3px solid #5e1fe4;
+    bottom: 20px;
+    display: none;
+    height: 41px;
+    left: 20px;
+    position: absolute;
+    width: 41px
+}
+
+.tenc-custom-video__pause:after {
+    border-left: 4px solid #5e1fe4;
+    border-right: 4px solid #5e1fe4;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    height: 17px;
+    left: 0;
+    margin: 9px 11px;
+    padding: 0 1px;
+    position: absolute;
+    top: 0;
+    width: 3px
+}
+
+.tenc-custom-video__pause:active, .tenc-custom-video__pause:focus, .tenc-custom-video__pause:hover {
+    outline: none
+}
+
+.tenc-custom-video__video {
+    height: 370px;
+    min-width: 100%;
+    z-index: 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-custom-video__video {
+        height: 460px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-custom-video__video {
+        height: 560px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-custom-video__video {
+        min-height: 100%;
+        height: auto
+    }
+}
+
+.tenc-custom-video__videoPlay {
+    background: transparent;
+    background: url(../images/play-btn.svg) 50% 0 no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 80px;
+    overflow: visible
+}
+
+.tenc-custom-video__videoPlay:before {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: BioSans-Bold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #7a7981;
+    content: "Watch the video";
+    display: inline-block;
+    position: relative;
+    top: 75px;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.tenc-custom-video__videoPlay:active, .tenc-custom-video__videoPlay:focus, .tenc-custom-video__videoPlay:hover {
+    outline: none
+}
+
+.tenc-custom-video__full {
+    width: 100%;
+    height: 370px;
+    display: none
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-custom-video__full {
+        height: 560px
+    }
+}
+
+.tenc-full-video-activator {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.tenc-full-video-activator .play {
+    height: 18px;
+    width: 18px;
+    margin-right: 10px
+}

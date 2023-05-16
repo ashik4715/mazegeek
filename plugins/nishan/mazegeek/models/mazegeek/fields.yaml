@@ -1,0 +1,168 @@
+fields:
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    size: ''
+                    span: full
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    mazegeek_logo:
+        label: 'Mazegeek Logo'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        fileTypes: 'svg, jpg, png'
+        useCaption: true
+        thumbOptions: null
+        span: full
+        required: 1
+        type: fileupload
+    navigation:
+        label: 'Navigation Title'
+        prompt: 'Add Navigation Title'
+        span: full
+        type: repeater
+        form:
+            fields:
+                nav_title:
+                    label: Title
+                    span: left
+                    placeholder: 'Enter Title'
+                    required: 1
+                    type: text
+                nav_url:
+                    label: 'Navigation URL'
+                    span: right
+                    placeholder: 'Enter Navigation URL'
+                    type: text
+    footer:
+        label: 'Mazegeek Footer'
+        prompt: 'Add Footer'
+        maxItems: '1'
+        span: full
+        disabled: 0
+        hidden: 0
+        type: repeater
+        form:
+            fields:
+                quick_links:
+                    label: 'Quick Links'
+                    prompt: 'Add Quick Link'
+                    span: left
+                    type: repeater
+                    form:
+                        fields:
+                            quick_items:
+                                label: 'Quick Items'
+                                span: auto
+                                type: text
+                            quick_url:
+                                label: 'Quick Link URL'
+                                span: auto
+                                placeholder: 'Enter Quick Link URL'
+                                type: text
+                technology_links:
+                    label: 'Technology Links'
+                    prompt: 'Add Technology Links'
+                    span: right
+                    type: repeater
+                    form:
+                        fields:
+                            technology_items:
+                                label: 'Technology items'
+                                span: auto
+                                type: text
+                            technology_url:
+                                label: 'Technology Link URL'
+                                span: auto
+                                placeholder: 'Enter Technology Link URL'
+                                type: text
+                services_links:
+                    label: 'Service Links'
+                    prompt: 'Add Service Link'
+                    span: left
+                    type: repeater
+                    form:
+                        fields:
+                            services_items:
+                                label: 'Service Items'
+                                span: auto
+                                type: text
+                            service_url:
+                                label: 'Service URL'
+                                span: right
+                                placeholder: 'Enter Service URL'
+                                type: text
+                animation:
+                    label: Animation
+                    prompt: 'Add Animation'
+                    maxItems: '1'
+                    span: right
+                    type: repeater
+                    form:
+                        fields:
+                            animation1:
+                                label: 'Animation Part1'
+                                span: auto
+                                placeholder: 'Enter Animation Part1'
+                                type: text
+                            animation2:
+                                label: 'Animation Part2'
+                                span: auto
+                                placeholder: 'Enter Animation Part2'
+                                type: text
+                            animation_image:
+                                label: 'Animation Background Image'
+                                mode: file
+                                span: auto
+                                type: mediafinder
+                partnership:
+                    label: 'Partnership title'
+                    span: left
+                    placeholder: 'Enter Partnership title'
+                    type: text
+                policy:
+                    label: 'Terms & Privacy Policy Title'
+                    span: right
+                    placeholder: 'Enter Terms & Privacy Policy Title'
+                    type: text
+                copyright:
+                    label: 'Copyright Title'
+                    span: left
+                    placeholder: 'Add Copyright Title'
+                    type: text
+                policy_url:
+                    label: 'Terms & Privacy Policy URL'
+                    span: right
+                    placeholder: 'Enter Terms & Privacy Policy URL'
+                    type: text
+                with_love:
+                    label: 'Made with Love'
+                    span: left
+                    placeholder: 'Made with Love'
+                    type: text
+    footer_icon:
+        label: 'Footer Icon'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        fileTypes: 'svg, jpg, png'
+        useCaption: true
+        thumbOptions: null
+        span: full
+        required: 1
+        type: fileupload

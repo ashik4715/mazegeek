@@ -1,0 +1,479 @@
+/*3152 - 3628*/
+
+.tenc-contact-modal {
+    background: #fff;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1000;
+    overflow: scroll
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal {
+        height: 100vh;
+        overflow: hidden
+    }
+}
+
+.tenc-contact-modal .container, .tenc-contact-modal .tenc-intro__wrapper {
+    margin: 0
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-contact-modal .container, .tenc-contact-modal .tenc-intro__wrapper {
+        padding: 0 90px
+    }
+}
+
+.tenc-contact-modal__content {
+    display: -ms-flexbox;
+    display: flex
+}
+
+.tenc-contact-modal__logo {
+    position: absolute;
+    top: 37px;
+    left: 30px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-contact-modal__logo {
+        top: 37px;
+        left: 45px
+    }
+}
+
+.tenc-contact-modal__contact-form-wrapper {
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    color: #2d2b37;
+    padding: 27px 30px 40px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-contact-modal__contact-form-wrapper {
+        padding: 90px 180px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal__contact-form-wrapper {
+        width: 50%;
+        height: 100vh;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 0;
+        padding: 0 90px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-contact-modal__contact-form-wrapper {
+        padding: 0 110px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-contact-modal__contact-form-wrapper {
+        padding: 0 200px
+    }
+}
+
+.tenc-contact-modal__contact-form-wrapper--small-height {
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    padding: 40px 6%
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal__contact-form-wrapper--small-height {
+        overflow-y: scroll
+    }
+}
+
+.tenc-contact-modal__heading {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-size: 2.4rem;
+    /*font-family: BioSans-Light, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.12
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-contact-modal__heading {
+        font-size: 32px;
+        font-size: 3.2rem;
+        /*font-family: BioSans-Light, sans-serif;*/
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -2px;
+        line-height: 1.19
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-contact-modal__heading {
+        font-size: 46px;
+        font-size: 4.6rem;
+        /*font-family: BioSans-Light, sans-serif;*/
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -2px;
+        line-height: 1.19
+    }
+}
+
+.tenc-contact-modal__subheading {
+    font-size: 16px;
+    font-size: 1.6rem;
+    /*font-family: BioSans-Light, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.56
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-contact-modal__subheading {
+        font-size: 18px;
+        font-size: 1.8rem;
+        /*font-family: BioSans-Light, sans-serif;*/
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.33;
+        margin-bottom: 5px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-contact-modal__subheading {
+        font-size: 18px;
+        font-size: 1.8rem;
+        /*font-family: BioSans-Light, sans-serif;*/
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.33
+    }
+}
+
+.tenc-contact-modal__thanks {
+    font-size: 14px;
+    font-size: 1.4rem;
+    /*font-family: BioSans-Regular, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    background: #202020;
+    color: #00d69e;
+    float: left;
+    height: 110%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 1.6em;
+    opacity: 0;
+    padding: 30px 20px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    top: -10px;
+    transition: all .5s;
+    transform: translateY(-100px);
+    white-space: normal;
+    width: 100%;
+    z-index: 1
+}
+
+@media (-ms-high-contrast: none), screen and (-ms-high-contrast: active) {
+    .tenc-contact-modal__thanks {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-contact-modal__thanks {
+        line-height: 3.5
+    }
+}
+
+.tenc-contact-modal__thanks--visible {
+    opacity: 1;
+    pointer-events: all
+}
+
+@media (-ms-high-contrast: none), screen and (-ms-high-contrast: active) {
+    .tenc-contact-modal__thanks--visible {
+        display: block
+    }
+}
+
+.tenc-contact-modal__thanks--lp {
+    background: #14101d
+}
+
+.tenc-contact-modal__thanks-heading {
+    display: block;
+    margin-bottom: 10px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-contact-modal__thanks-heading {
+        margin-bottom: 0
+    }
+}
+
+.tenc-contact-modal__thanks-text {
+    line-height: 1.5em;
+    margin-bottom: 0
+}
+
+.tenc-contact-modal__thanks-btn {
+    display: inline-block;
+    max-width: 180px;
+    margin: 20px auto 0
+}
+
+.tenc-contact-modal__testimonial-wrapper {
+    display: none
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal__testimonial-wrapper {
+        display: block;
+        width: 50%;
+        height: 100vh;
+        background: linear-gradient(90deg, #8658eb, #6831e4)
+    }
+}
+
+.tenc-contact-modal__testimonial {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: inherit;
+    position: relative
+}
+
+.tenc-contact-modal__testimonial--small-height {
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 125px 0;
+    overflow-y: scroll
+}
+
+.tenc-contact-modal__featured {
+    width: 100%
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal__featured {
+        margin-top: 60px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-contact-modal__featured {
+        margin-top: 100px
+    }
+}
+
+.tenc-contact-modal__featured__copy {
+    font-size: 14px;
+    font-size: 1.4rem;
+    /*font-family: BioSans-SemiBold, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    color: #a7a7a7;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal__featured__copy {
+        font-size: 16px;
+        font-size: 1.6rem;
+        /*font-family: BioSans-SemiBold, sans-serif;*/
+        font-style: normal;
+        font-weight: 400
+    }
+}
+
+.tenc-contact-modal__featured__logos {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 0 30px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-contact-modal__featured__logos {
+        padding: 20px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-contact-modal__featured__logos {
+        padding: 30px 60px 60px
+    }
+}
+
+.tenc-contact-modal__featured__logos__item {
+    max-width: 185px;
+    max-height: 40px;
+    padding: 5px 10px;
+    width: 100%
+}
+
+.tenc-contact-modal__featured__logos__item--horizontal {
+    margin-top: 4px;
+    padding: 8px 15px 5px
+}
+
+.tenc-contact-modal__thanks-text:last-of-type {
+    margin-bottom: 30px
+}
+
+.tenc-contact-modal .tenc-contact-page__form-box .tenc-contact-page__input-light {
+    font-size: 16px;
+    font-size: 1.6rem;
+    /*font-family: BioSans-Light, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    color: #202020;
+    -webkit-text-fill-color: #202020;
+    margin-bottom: 25px;
+    overflow: auto
+}
+
+.tenc-contact-modal .tenc-contact-page__form-box .select2-container, .tenc-contact-modal .tenc-contact-page__form-box .tenc-contact-page__input-light {
+    box-shadow: none;
+    border-bottom: 2px solid #c1c1d0;
+    background-color: transparent;
+    width: 100%
+}
+
+.tenc-contact-modal .tenc-contact__form {
+    margin: 0;
+    padding: 0
+}
+
+.tenc-contact-modal .tenc-contact__form form {
+    margin: 30px 0 0;
+    padding: 0;
+    min-height: 300px
+}
+
+.tenc-modal__close {
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    z-index: 1
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-modal__close {
+        top: 35px;
+        right: 50px
+    }
+}
+
+.tenc-modal__close:hover:after, .tenc-modal__close:hover:before {
+    background: #6831e4
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-modal__close:hover:after, .tenc-modal__close:hover:before {
+        background: #fff
+    }
+}
+
+.tenc-modal__close:after, .tenc-modal__close:before {
+    content: "";
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #8658eb;
+    transition: background .2s ease
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-modal__close:after, .tenc-modal__close:before {
+        background: #a7a7a7
+    }
+}
+
+.tenc-modal__close:before {
+    transform: rotate(-45deg)
+}
+
+.tenc-modal__close:after {
+    transform: rotate(45deg)
+}
+
+.tenc-contact-sales {
+    background: #fff !important;
+    width: 100vw;
+    height: 100%;
+    min-height: 100vh
+}
+
+.tenc-contact-sales .tenc-contact-modal__content, .tenc-contact-sales .tenc-contact-modal__testimonial-wrapper {
+    height: 100%
+}
+
+.tenc-contact-sales .tenc-contact-modal__contact-form-wrapper--small-height {
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 100px 6%;
+    overflow-y: inherit
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-contact-sales .tenc-contact-modal__contact-form-wrapper--small-height {
+        padding: 150px 6% 100px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-contact-sales .tenc-contact-modal__testimonial-wrapper {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100%;
+        min-height: 100vh;
+        padding: 100px 0
+    }
+
+    .tenc-contact-sales .tenc-contact-modal__testimonial--small-height {
+        overflow-y: inherit
+    }
+}

@@ -1,0 +1,4 @@
+title: Services
+modelClass: Nishan\Services\Models\Service
+toolbar:
+    buttons: reorder_toolbar

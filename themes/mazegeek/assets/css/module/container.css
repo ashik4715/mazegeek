@@ -1,0 +1,80 @@
+/*3651-3728*/
+
+.continer, .tenc-intro__wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 25px
+}
+
+.continer:after, .continer:before, .tenc-intro__wrapper:after, .tenc-intro__wrapper:before {
+    content: "";
+    display: table
+}
+
+.continer:after, .tenc-intro__wrapper:after {
+    clear: both
+}
+
+@media only screen and (min-width: 768px) {
+    .continer, .tenc-intro__wrapper {
+        padding: 0 45px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .continer, .tenc-intro__wrapper {
+        padding: 0 60px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .continer, .tenc-intro__wrapper {
+        padding: 0 90px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .continer, .tenc-intro__wrapper {
+        padding: 0;
+        max-width: 1700px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .continer--wide {
+        max-width: 1900px
+    }
+}
+
+.continer--fluid {
+    padding: 0;
+    max-width: none
+}
+
+@media only screen and (min-width: 768px) {
+    .continer--narrow {
+        max-width: 900px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .continer--narrow {
+        max-width: 1200px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .continer--narrow {
+        max-width: 1300px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .continer--narrow {
+        max-width: 1500px
+    }
+}
+
+.continer--relative {
+    position: relative
+}

@@ -1,0 +1,1771 @@
+.tenc-swiper-tool__controller {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 420px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-swiper-tool__controller {
+        top: 500px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-swiper-tool__controller {
+        top: 470px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-swiper-tool__controller {
+        top: 560px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-swiper-tool__controller {
+        top: 590px
+    }
+}
+
+.tenc-swiper-tool__arrow-left, .tenc-swiper-tool__arrow-right {
+    cursor: pointer;
+    max-height: 20px;
+    width: 30px
+}
+
+.tenc-swiper-tool__arrow--disabled {
+    cursor: not-allowed;
+    opacity: .4
+}
+
+.tenc-swiper-tool__progressbar {
+    background: #e7e7ec;
+    height: 2px;
+    margin: 0 20px;
+    position: relative;
+    width: 130px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-swiper-tool__progressbar {
+        margin: 0 50px
+    }
+}
+
+.tenc-swiper-tool__progressbar--color {
+    background: #5e1fe4;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: width .2s ease;
+    width: 30px
+}
+
+.tenc-swiper__swipe-arrow--disabled {
+    cursor: not-allowed;
+    opacity: .3
+}
+
+/* 22023-23707*/
+.tenc-simple-portfolio-entry-preheading {
+    font-size: 11px;
+    /*font-size: 1.1rem;*/
+    /*font-family: BioSans-Bold, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .8px;
+    color: #7142eb;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    display: inline-block
+}
+
+.tenc-simple-portfolio-entry-preheading--margin-bottom {
+    margin-bottom: 15px
+}
+
+.tenc-portfolio-entry-functionalities {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    counter-reset: b
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities {
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+.tenc-portfolio-entry-functionalities-wrapper {
+    background: #fff;
+    color: #000;
+    min-height: 700px
+}
+
+@media only screen and (min-width: 420px) {
+    .tenc-portfolio-entry-functionalities-wrapper {
+        min-height: 730px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-functionalities-wrapper {
+        min-height: 850px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-wrapper {
+        min-height: 900px;
+        padding-top: 100px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-wrapper {
+        min-height: 950px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tenc-portfolio-entry-functionalities-wrapper--trusted-mail-case-study {
+        min-height: 730px
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .tenc-portfolio-entry-functionalities-wrapper--trusted-mail-case-study {
+        min-height: 840px
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box {
+    width: 75vw;
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    box-shadow: 0 42px 64px 0 #e7e7ec;
+    height: 600px
+}
+
+@media only screen and (min-width: 420px) {
+    .tenc-portfolio-entry-functionalities-box {
+        height: 630px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-functionalities-box {
+        height: 750px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-box {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        height: 500px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-box {
+        height: 650px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-functionalities-box__swiper {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        height: 750px;
+        width: 150px;
+        background: #4e5571;
+        opacity: 0;
+        transition: all .25s ease
+    }
+
+    .tenc-portfolio-entry-functionalities-box__swiper:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        border-style: solid;
+        border-color: #fff;
+        border-width: 2px 2px 0 0;
+        position: absolute;
+        transform-origin: 50% 50%
+    }
+
+    .tenc-portfolio-entry-functionalities-box__swiper--left {
+        left: 0
+    }
+
+    .tenc-portfolio-entry-functionalities-box__swiper--left:after {
+        transform: rotate(-135deg);
+        margin: -15px 0 0 -10px
+    }
+
+    .tenc-portfolio-entry-functionalities-box__swiper--right {
+        right: 0
+    }
+
+    .tenc-portfolio-entry-functionalities-box__swiper--right:after {
+        transform: rotate(45deg);
+        margin: -15px 0 0 -20px
+    }
+
+    .tenc-portfolio-entry-functionalities-box__swiper:hover {
+        opacity: .7
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-box__swiper {
+        height: 500px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-box__swiper {
+        height: 650px
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box .swipe-for-more, .tenc-portfolio-entry-functionalities-box:first-of-type .tenc-portfolio-entry-functionalities-box__swiper--left, .tenc-portfolio-entry-functionalities-box:nth-of-type(3) .tenc-portfolio-entry-functionalities-box__swiper--right {
+    display: none
+}
+
+.tenc-portfolio-entry-functionalities-box:first-of-type > :first-child {
+    position: relative
+}
+
+.tenc-portfolio-entry-functionalities-box:first-of-type > :first-child .swipe-for-more {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    text-transform: uppercase;
+    font-size: 8px;
+    /*font-size: .8rem;*/
+    font-family: BioSans-SemiBold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #7a7981;
+    width: 53px;
+    letter-spacing: .5px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-functionalities-box:first-of-type > :first-child .swipe-for-more {
+        display: none
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box:first-of-type > :first-child:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: -40px;
+    height: 2px;
+    width: 94px;
+    background: #5e1fe4;
+    letter-spacing: .3px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-functionalities-box:first-of-type > :first-child:after {
+        display: none
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px;
+    -ms-flex-order: 2;
+    order: 2;
+    position: relative
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-box-content {
+        padding: 0 40px;
+        -ms-flex-order: 1;
+        order: 1;
+        width: 65%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-functionalities-box-content {
+        padding: 0 90px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-box-content {
+        width: 45%
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box-image {
+    -ms-flex-order: 1;
+    order: 1
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-box-image {
+        -ms-flex-order: 2;
+        order: 2
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box-image--mobile {
+    max-width: 100%;
+    width: 100%
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-box-image--mobile {
+        display: none
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box-image--tablet {
+    display: none
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-box-image--tablet {
+        height: 100%;
+        display: block
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-functionalities-box-image--tablet {
+        display: none
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box-image--desktop {
+    height: 100%
+}
+
+@media only screen and (max-width: 1365px) {
+    .tenc-portfolio-entry-functionalities-box-image--desktop {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-copy {
+        font-size: 18px
+    }
+}
+
+.tenc-portfolio-entry-functionalities-title {
+    position: relative;
+    line-height: 1;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 70px
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-functionalities-title {
+        font-size: 40px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-title {
+        font-size: 55px
+    }
+}
+
+.tenc-portfolio-entry-functionalities-title:before {
+    content: counter(b);
+    background: #f2f2f4;
+    counter-increment: b;
+    color: #5e1fe4;
+    font-size: 18px;
+    /*font-size: 1.8rem;*/
+    font-family: BioSans-SemiBold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 20px;
+    padding: 14px 21px;
+    left: -70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities-title:before {
+        top: 14px;
+        transform: translateY(0)
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-functionalities-title:before {
+        top: 18px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-title:before {
+        top: 24px
+    }
+}
+
+.tenc-portfolio-entry-functionalities .tenc-swiper-tool__controller {
+    top: 640px
+}
+
+@media only screen and (min-width: 420px) {
+    .tenc-portfolio-entry-functionalities .tenc-swiper-tool__controller {
+        top: 700px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-functionalities .tenc-swiper-tool__controller {
+        top: 780px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-functionalities .tenc-swiper-tool__controller {
+        top: 570px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities .tenc-swiper-tool__controller {
+        top: 720px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tenc-portfolio-entry-functionalities--trusted-mail-case-study .tenc-portfolio-entry-functionalities-box {
+        height: 690px
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .tenc-portfolio-entry-functionalities--trusted-mail-case-study .tenc-portfolio-entry-functionalities-box {
+        height: 820px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .tenc-portfolio-entry-functionalities--trusted-mail-case-study .tenc-swiper-tool__controller {
+        top: 730px
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .tenc-portfolio-entry-functionalities--trusted-mail-case-study .tenc-swiper-tool__controller {
+        top: 850px
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box:first-of-type {
+    left: calc(0 * 75vw + 0 * 40px)
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-box:first-of-type {
+        left: calc(0 * 75vw + 0 * 40px)
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box:nth-of-type(2) {
+    left: calc(1 * 75vw + 1 * 40px)
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-box:nth-of-type(2) {
+        left: calc(1 * 75vw + 1 * 40px)
+    }
+}
+
+.tenc-portfolio-entry-functionalities-box:nth-of-type(3) {
+    left: calc(2 * 75vw + 2 * 40px)
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-functionalities-box:nth-of-type(3) {
+        left: calc(2 * 75vw + 2 * 40px)
+    }
+}
+
+.tenc-portfolio-entry-intro {
+    padding-bottom: 100px
+}
+
+.tenc-portfolio-entry-intro--trustedmail, .tenc-portfolio-entry-intro--truststamp {
+    padding-bottom: 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--trustedmail, .tenc-portfolio-entry-intro--truststamp {
+        padding-bottom: 100px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--trustedmail .tenc-portfolio-entry-intro__info, .tenc-portfolio-entry-intro--truststamp .tenc-portfolio-entry-intro__info {
+        margin: 90px 0 0
+    }
+}
+
+.tenc-portfolio-entry-intro--timeion {
+    padding-bottom: 50px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--timeion {
+        padding-bottom: 250px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro {
+        padding-bottom: 250px;
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 800px
+    }
+}
+
+.tenc-portfolio-entry-intro-wrapper {
+    min-height: 100%;
+    padding: 100px 0 0;
+    background-image: linear-gradient(193deg, #110827, #100727);
+    color: #fff;
+    position: relative
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro-wrapper {
+        min-height: 100vh
+    }
+}
+
+.tenc-portfolio-entry-intro .tenc-heading {
+    padding: 20px 0
+}
+
+.tenc-portfolio-entry-intro--left {
+    min-height: 100%;
+    width: 100%
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--left {
+        width: 50%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: calc(100vh - 350px)
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right {
+        width: 50%;
+        position: absolute;
+        top: 100px;
+        height: 100%;
+        right: 0;
+        display: block
+    }
+}
+
+.tenc-portfolio-entry-intro--right--mobile {
+    width: 100%;
+    height: 360px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--mobile {
+        display: none
+    }
+}
+
+.tenc-portfolio-entry-intro-app-logo {
+    height: auto;
+    max-height: 70px;
+    width: 100px
+}
+
+.tenc-portfolio-entry-intro-app-logo--trustedmail, .tenc-portfolio-entry-intro-app-logo--truststamp {
+    width: 180px
+}
+
+.tenc-portfolio-entry-intro__info {
+    width: 90%;
+    margin: 50px 0
+}
+
+.tenc-portfolio-entry-intro__info-heading {
+    padding: 30px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro__info-heading {
+        padding: 60px 0
+    }
+}
+
+.tenc-portfolio-entry-intro__info-stats {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro__info-stats {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap
+    }
+}
+
+.tenc-portfolio-entry-intro__info-stats-item {
+    margin-right: 45px;
+    margin-left: 25px;
+    position: relative
+}
+
+.tenc-portfolio-entry-intro__info-stats-item:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 8px;
+    border: 2px solid #7142eb;
+    background: transparent;
+    display: inline-block;
+    left: -25px;
+    top: 21px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro__info-stats-item:before {
+        top: 22px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro__info-stats-item:before {
+        top: 29px
+    }
+}
+
+.tenc-portfolio-entry-intro__info-stats-item-stat {
+    font-size: 40px;
+    /*font-size: 4rem;*/
+    /*font-family: BioSans-Light, sans-serif;*/
+    font-style: normal;
+    font-weight: 400
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro__info-stats-item-stat {
+        letter-spacing: -2px;
+        line-height: 1.19
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro__info-stats-item-stat {
+        font-size: 38px;
+        /*font-size: 3.8rem;*/
+        /*font-family: BioSans-Light, sans-serif;*/
+        font-style: normal;
+        font-weight: 400
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro__info-stats-item-stat {
+        font-size: 50px;
+        /*font-size: 5rem;*/
+        /*font-family: BioSans-Light, sans-serif;*/
+        font-style: normal;
+        font-weight: 400
+    }
+}
+
+.tenc-portfolio-entry-intro__info-stats-item-title {
+    margin-top: 5px;
+    font-size: 11px;
+    /*font-size: 1.1rem;*/
+    /*font-family: BioSans-Bold, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .8px;
+    text-transform: uppercase
+}
+
+.tenc-simple-portfolio-entry-preheading {
+    font-size: 11px;
+    /*font-size: 1.1rem;*/
+    /*font-family: BioSans-Bold,sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .8px;
+    color: #34b57c;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.tenc-portfolio-entry-overview {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-overview {
+        padding: 40px 25px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-overview {
+        padding: 70px 50px
+    }
+}
+
+.tenc-portfolio-entry-overview-wrapper {
+    background: #fff;
+    color: #000;
+    position: relative;
+    margin-top: 50px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-overview-wrapper {
+        margin-top: -150px;
+        box-shadow: 0 42px 64px 0 rgba(0, 0, 0, .05)
+    }
+}
+
+.tenc-portfolio-entry-overview__main-info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 40px
+}
+
+.tenc-portfolio-entry-overview__main-info > div {
+    width: 100%;
+    margin: 20px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-overview__main-info > div {
+        width: 45%;
+        margin: 0 0 10px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-overview__main-info > div {
+        width: 23%
+    }
+}
+
+.tenc-portfolio-entry-overview__main-info-wrapper {
+    width: 100%
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-overview__main-info-wrapper {
+        width: 60%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+        justify-content: space-around
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-overview__main-info-wrapper {
+        width: 70%
+    }
+}
+
+.tenc-portfolio-entry-overview-industry {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-overview-industry {
+        margin-top: 0;
+        width: 30%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-overview-industry {
+        width: 20%
+    }
+}
+
+.tenc-portfolio-entry-overview-industry-name {
+    font-size: 18px;
+    /*font-size: 1.8rem;*/
+    /*!*font-family: BioSans-Bold, sans-serif;*!*/
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #34b57c;
+    text-transform: uppercase;
+    margin-top: 20px
+}
+
+.tenc-portfolio-entry-overview-industry__image-wrapper {
+    padding: 50px 80px;
+    background-color: #f2f2f4;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.tenc-portfolio-entry-problem-solution {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 100px 0;
+    position: relative
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution {
+        height: 700px;
+        -ms-flex-align: center;
+        align-items: center
+    }
+}
+
+.tenc-portfolio-entry-problem-solution-wrapper {
+    background: #fff;
+    color: #000;
+    position: relative
+}
+
+.tenc-portfolio-entry-problem-solution__image {
+    position: absolute
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image {
+        top: 100px;
+        left: -300px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image {
+        left: -100px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__image {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image img {
+    display: none;
+    max-width: 100%
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image img {
+        display: block
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--adshares-case-study {
+        left: -450px;
+        top: 70px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--adshares-case-study {
+        left: -280px
+    }
+}
+
+@media only screen and (min-width: 1680px) {
+    .tenc-portfolio-entry-problem-solution__image--adshares-case-study {
+        left: -140px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__image--adshares-case-study {
+        left: -170px
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image--adshares-case-study img {
+    max-height: 550px
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--adshares-case-study img {
+        max-height: 590px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--goseqit-case-study {
+        left: -310px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--goseqit-case-study {
+        left: -100px
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    .tenc-portfolio-entry-problem-solution__image--goseqit-case-study {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image--goseqit-case-study img {
+    max-height: 600px
+}
+
+@media only screen and (min-width: 1500px) {
+    .tenc-portfolio-entry-problem-solution__image--trust-stamp-case-study {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image--trust-stamp-case-study img {
+    max-height: 520px
+}
+
+@media only screen and (min-width: 1500px) {
+    .tenc-portfolio-entry-problem-solution__image--trusted-mail-case-study {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image--trusted-mail-case-study img {
+    box-shadow: 0 0 54px rgba(0, 0, 0, .05);
+    max-width: 86%
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--trusted-mail-case-study img {
+        max-width: 90%
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__image--trusted-mail-case-study img {
+        max-width: 94%
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--royals-case-study {
+        left: -350px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--royals-case-study {
+        left: -100px
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    .tenc-portfolio-entry-problem-solution__image--royals-case-study {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image--royals-case-study img {
+    max-height: 420px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--timeion-case-study {
+        left: -350px
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .tenc-portfolio-entry-problem-solution__image--timeion-case-study {
+        left: -250px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--timeion-case-study {
+        left: -100px
+    }
+}
+
+@media only screen and (min-width: 1550px) {
+    .tenc-portfolio-entry-problem-solution__image--timeion-case-study {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__image--timeion-case-study img {
+    max-height: 510px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--iplay-case-study {
+        top: 60px
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    .tenc-portfolio-entry-problem-solution__image--iplay-case-study {
+        left: 0
+    }
+}
+
+@media only screen and (min-width: 1750px) {
+    .tenc-portfolio-entry-problem-solution__image--zapp-case-study {
+        left: 0
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    .tenc-portfolio-entry-problem-solution__image--glucosemama-case-study {
+        left: 0
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__content {
+        margin-left: 45%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__content {
+        margin-left: 55%
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__content {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        margin-left: 45%
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__content__button--mobile {
+    color: #5e1fe4;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__content__button--mobile {
+        display: none
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__content__button--mobile:hover {
+    color: #fff
+}
+
+.tenc-portfolio-entry-problem-solution__content__button--desktop {
+    color: #5e1fe4;
+    display: none;
+    margin-top: 40px
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__content__button--desktop {
+        display: -ms-flexbox;
+        display: flex
+    }
+}
+
+.tenc-portfolio-entry-problem-solution__content__button--desktop:hover {
+    color: #fff
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__item {
+        margin: 0 50px 0 0
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--adshares {
+        background-image: linear-gradient(180deg, #eceff6, #d4d9e5)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--adshares--mobile {
+    background-image: linear-gradient(180deg, #eceff6, #d4d9e5)
+}
+
+.tenc-portfolio-entry-intro--right--adshares > img {
+    position: absolute;
+    max-height: 300px;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 160px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--adshares > img {
+        margin-top: 0;
+        right: -240px;
+        transform: translateX(0);
+        top: 150px;
+        max-height: 420px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--adshares > img {
+        top: 40%;
+        transform: translateY(-50%);
+        max-height: 450px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--adshares > img {
+        max-height: 600px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--adshares > img {
+        right: -20px;
+        top: 42%;
+        max-height: 650px
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .tenc-portfolio-entry-intro--right--adshares > img {
+        max-height: 60vh;
+        right: 0
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--glucosemama {
+        background-image: linear-gradient(126deg, #8eadfd, #acd8fa)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--glucosemama--mobile {
+    background-image: linear-gradient(126deg, #8eadfd, #acd8fa)
+}
+
+.tenc-portfolio-entry-intro--right--glucosemama > img {
+    position: absolute
+}
+
+.tenc-portfolio-entry-intro--right--glucosemama > img:first-of-type {
+    max-height: 400px;
+    margin-left: 100px;
+    margin-top: 100px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:first-of-type {
+        margin-top: 0;
+        margin-left: 0;
+        right: -100px;
+        top: 50px;
+        max-height: 700px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:first-of-type {
+        right: -150px;
+        top: 100px;
+        max-height: 600px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:first-of-type {
+        right: -50px;
+        top: 50px;
+        max-height: 600px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:first-of-type {
+        right: -250px;
+        top: 0;
+        max-height: 1000px
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:first-of-type {
+        max-height: 90vh;
+        height: 90vh
+    }
+}
+
+.tenc-portfolio-entry-intro--right--glucosemama > img:nth-of-type(2) {
+    max-height: 200px;
+    margin-top: 120px;
+    margin-left: -50px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:nth-of-type(2) {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:nth-of-type(2) {
+        margin-top: 0;
+        margin-left: 0;
+        display: block;
+        left: -50px;
+        max-height: 450px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:nth-of-type(2) {
+        max-height: 500px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:nth-of-type(2) {
+        left: 0;
+        max-height: 650px
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .tenc-portfolio-entry-intro--right--glucosemama > img:nth-of-type(2) {
+        max-height: 65vh;
+        height: 65vh
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--goseqit {
+        background-image: linear-gradient(45deg, #efcd87, #f6b659)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--goseqit--mobile {
+    background-image: linear-gradient(45deg, #efcd87, #f6b659)
+}
+
+.tenc-portfolio-entry-intro--right--goseqit > img {
+    position: absolute;
+    max-height: 250px;
+    right: calc(50% - 300px);
+    margin: 155px 80px 0 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--goseqit > img {
+        margin-top: 0;
+        margin-left: 0;
+        right: -200px;
+        top: 150px;
+        max-height: 420px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--goseqit > img {
+        top: 100px;
+        max-height: 470px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--goseqit > img {
+        max-height: 500px
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    .tenc-portfolio-entry-intro--right--goseqit > img {
+        right: -30px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--goseqit > img {
+        max-height: 610px;
+        right: -60px;
+        top: 30px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--iplay {
+        background-image: linear-gradient(190deg, #fff, #a3a3b8)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--iplay--mobile {
+    background-image: linear-gradient(193deg, #110827, #100727)
+}
+
+.tenc-portfolio-entry-intro--right--iplay > img {
+    max-height: 420px;
+    position: absolute;
+    right: calc(50% - 230px);
+    transform: translateY(-10px)
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--iplay > img {
+        left: 0;
+        max-height: 600px;
+        right: 0;
+        top: 100px;
+        transform: translateY(0)
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--iplay > img {
+        max-height: 700px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--iplay > img {
+        max-height: 90%;
+        top: 0
+    }
+}
+
+.tenc-portfolio-entry-intro-app-logo--iplay {
+    display: none
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__item--iplay {
+        margin: 0 50px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--iplay-case-study {
+        max-width: 70%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--iplay-case-study {
+        max-width: 55%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--royals {
+        background-image: linear-gradient(135deg, #f8edda, #fed6a6)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--royals--mobile {
+    background-image: linear-gradient(135deg, #f8edda, #fed6a6)
+}
+
+.tenc-portfolio-entry-intro--right--royals > img {
+    position: absolute;
+    max-height: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 150px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--royals > img {
+        margin-top: 0;
+        max-height: 540px;
+        top: 40%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--royals > img {
+        max-height: 600px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--royals > img {
+        max-height: 680px;
+        margin-top: 20px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--royals > img {
+        margin-top: 90px;
+        max-height: 830px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--timeion {
+        background-image: linear-gradient(90deg, #fac89c, #ff9269)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--timeion--mobile {
+    background-image: linear-gradient(90deg, #fac89c, #ff9269)
+}
+
+.tenc-portfolio-entry-intro--right--timeion > img {
+    max-height: 300px;
+    position: absolute;
+    margin: 80px auto 0
+}
+
+@media only screen and (min-width: 420px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        max-height: 520px;
+        left: 0;
+        transform: translateX(0)
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        max-height: 550px;
+        left: 20px;
+        margin-top: 50px
+    }
+}
+
+@media only screen and (min-width: 1190px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        left: 70px
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        left: 110px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        max-height: 90%;
+        left: 50px;
+        margin-top: 0
+    }
+}
+
+@media only screen and (min-width: 1750px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        left: 130px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--timeion > img {
+        left: 15%
+    }
+}
+
+.tenc-portfolio-entry-intro--timeion .tenc-portfolio-entry-intro--left {
+    height: 100%
+}
+
+@media only screen and (max-width: 420px) {
+    .tenc-portfolio-entry-intro--timeion .tenc-portfolio-entry-intro__info-stats-item {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    .tenc-heading--hero--timeion {
+        font-size: 59px;
+        line-height: 72px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--truststamp {
+        background-image: linear-gradient(305deg, #0e8d5f 50%, #3fec84)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--truststamp--mobile {
+    background-image: linear-gradient(305deg, #0e8d5f 50%, #3fec84);
+    height: 360px
+}
+
+.tenc-portfolio-entry-intro--right--truststamp > img {
+    position: absolute;
+    max-height: 370px;
+    margin-left: calc(100% - 350px);
+    margin-top: 55px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--truststamp > img {
+        margin-top: 0;
+        margin-left: 0;
+        right: 0;
+        top: 150px;
+        max-height: 400px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--truststamp > img {
+        top: 45%;
+        max-height: 520px;
+        transform: translateY(-50%)
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--truststamp > img {
+        max-height: 650px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--truststamp > img {
+        top: 48%;
+        max-height: 780px
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .tenc-portfolio-entry-intro--right--truststamp > img {
+        max-height: 80vh;
+        height: 80vh
+    }
+}
+
+@media only screen and (min-width: 4000px) {
+    .tenc-portfolio-entry-intro--right--truststamp > img {
+        top: 200px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--trustedmail {
+        background-image: linear-gradient(45deg, #dbe2ec, #8e97a6)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--trustedmail--mobile {
+    background-image: linear-gradient(45deg, #dbe2ec, #8e97a6);
+    height: 440px
+}
+
+.tenc-portfolio-entry-intro--right--trustedmail > img {
+    position: absolute;
+    max-height: 370px;
+    transform: translateX(-50%);
+    left: 50%;
+    margin-top: 60px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--trustedmail > img {
+        margin-top: 0;
+        margin-left: 0;
+        right: 0;
+        top: 110px;
+        max-height: 450px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--trustedmail > img {
+        top: 70px;
+        max-height: 600px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--trustedmail > img {
+        top: 80px;
+        max-height: 720px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-intro--right--trustedmail > img {
+        max-height: 750px
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .tenc-portfolio-entry-intro--right--trustedmail > img {
+        top: 100px;
+        max-height: 80vh;
+        height: 80vh
+    }
+}
+
+@media only screen and (min-width: 4000px) {
+    .tenc-portfolio-entry-intro--right--trustedmail > img {
+        top: 200px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--zapp {
+        background-image: linear-gradient(90deg, #00b85a, #00de6c)
+    }
+}
+
+.tenc-portfolio-entry-intro--right--zapp--mobile {
+    background-image: linear-gradient(90deg, #00b85a, #00de6c)
+}
+
+.tenc-portfolio-entry-intro--right--zapp > img {
+    max-height: 420px;
+    position: absolute;
+    right: calc(50% - 230px);
+    margin-top: 90px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-portfolio-entry-intro--right--zapp > img {
+        left: -90px;
+        max-height: 600px;
+        top: 20px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-intro--right--zapp > img {
+        max-height: 700px;
+        left: -130px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-intro--right--zapp > img {
+        max-height: 90%;
+        top: -60px
+    }
+}
+
+.tenc-portfolio-entry-intro-app-logo--zapp {
+    display: none
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-portfolio-entry-problem-solution__item--zapp {
+        margin: 0 50px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-portfolio-entry-problem-solution__image--zapp-case-study {
+        max-width: 70%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-portfolio-entry-problem-solution__image--zapp-case-study {
+        max-width: 55%
+    }
+}

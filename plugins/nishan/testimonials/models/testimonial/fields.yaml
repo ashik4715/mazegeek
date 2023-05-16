@@ -1,0 +1,66 @@
+fields:
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        span: full
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    name:
+        label: 'Employee Name'
+        span: left
+        placeholder: 'Enter Employee Name'
+        required: 1
+        type: text
+    designation:
+        label: Designation
+        span: right
+        placeholder: 'Enter Designation'
+        required: 1
+        type: text
+    website_title:
+        label: 'Website Title'
+        span: left
+        placeholder: 'Enter Website Title'
+        required: 1
+        type: text
+    website_link:
+        label: 'Website URL Link'
+        span: right
+        placeholder: 'Enter Website URL'
+        required: 1
+        type: text
+    description:
+        label: 'Employee Description'
+        prompt: 'Add Employee Description'
+        span: full
+        maxItems: '1'
+        type: repeater
+        form:
+            fields:
+                quote:
+                    label: 'Employee Quote'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Employee Quote'
+                    required: 1
+                    type: textarea
+                photo:
+                    label: 'Employee Photo'
+                    mode: file
+                    span: left
+                    required: 1
+                    type: mediafinder

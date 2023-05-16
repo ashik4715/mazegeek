@@ -1,0 +1,10 @@
+name: Abouts
+form: $/nishan/abouts/models/about/fields.yaml
+modelClass: Nishan\Abouts\Models\About
+defaultRedirect: nishan/abouts/abouts
+create:
+    redirect: 'nishan/abouts/abouts/update/:id'
+    redirectClose: nishan/abouts/abouts
+update:
+    redirect: nishan/abouts/abouts
+    redirectClose: nishan/abouts/abouts

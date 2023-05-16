@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.portfolio::lang.plugin.name'
+    description: 'nishan.portfolio::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-pied-piper
+    homepage: ''
+navigation:
+    Portfolio:
+        label: Portfolios
+        url: nishan/portfolio/portfolios
+        icon: icon-pied-piper

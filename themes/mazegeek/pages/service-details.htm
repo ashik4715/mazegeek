@@ -1,0 +1,351 @@
+title = "Service-details"
+url = "/service/:slug"
+layout = "default"
+description = "Service Details goes here"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Nishan\Services\Models\Service"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+
+{% put styles %}
+<style>
+    .tenc-intro--how-we-work {
+        background: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.90) 35%, rgba(1, 32, 17, 0.8) 70%, rgba(1, 32, 17, 0.6)), url({{ 'assets/images/mgbanner/service_banner_1.png' |theme }});
+    }
+</style>
+<style>
+    .tenc-intro {
+        /* height: 100vh; */
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 4000px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+</style>
+<style>
+    .tenc-intro-main__wrapper {
+        max-width: 100%;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 90%;
+    }
+
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+        }
+
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+    }
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .more-service {
+        text-decoration: none
+    }
+
+</style>
+{% endput %}
+
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% put meta %}
+{% if record %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endput %}
+
+<main role="main" id="main">
+
+    <section class="tenc-intro tenc-intro--how-we-work">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper
+                tenc-intro-main__wrapper--short">
+                <div class="tenc-intro-main mt-4">
+
+                    <h1 class="h2 fw-600 tenc-intro-main__title text-center">
+        <span class="tenc-intro-main__title-part">
+            {% if record %}
+                {{ record.name}}
+                <br>
+                <h2 class="tenc-intro-main__content-copy color-white">
+                    {{ record.description}}
+                </h2>
+            {% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+        </span>
+                    </h1>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bgc-gray-5 pt-110 pb-80">
+        <div class="container">
+            <h4 class="fw-600">
+                {% if record %}
+                    {{record.details}}
+                {% else %}
+                    {{ notFoundMessage }}
+                {% endif %}
+            </h4>
+            <p>&nbsp;</p>
+
+            {% if record %}
+            {% for notes in record.notes %}
+            <div class="row mb-4">
+                <div class="col-12 col-md-4">
+                    <h4 class="fw-600 color-black">
+                        {{notes.main_feature_short}}
+                    </h4>
+                </div>
+
+                <div class="col-12 col-md-7 offset-md-1">
+                    <p>
+                        {{notes.mainfeature_description}}
+                    </p>
+                    <!--<p>With increasing number
+                    of foreign clients our IT sector
+                    is attracting, our software engineering
+                    resources are gaining valuable global
+                    experience and becoming more effective
+                    communicators in the process.
+                    </p>-->
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                {% for subtitles in notes.main_feature %}
+
+                <div class="col-12">
+                    <h6 class="color-black">
+                        {{ subtitles.feature_subtitle}}
+                    </h6>
+
+                    <hr>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h4 class="color-black">
+                        {{ subtitles.feature_title}}
+                    </h4>
+                </div>
+
+                <div class="col-12 col-md-7 offset-md-1">
+                    <ul class="rhomb ">
+                        {% for features in subtitles.feature_list %}
+                        <li>
+                            {{ features.feature_list }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+
+            </div>
+            {% endfor %}
+            {% else %}
+            {{ notFoundMessage }}
+            {% endif %}
+
+        </div>
+    </section>
+
+    <section class="tenc-universal-template-how-we-work-wrapper">
+        <div class="container">
+            <div class="tenc-universal-template-how-we-work">
+
+                <div class="tenc-intro-main">
+                    <div>
+                        <h3 class="h3 fw-400 tenc-intro-main__title color-white">
+          <span class="tenc-intro-main__title-part">
+            Let's make great products together          </span>
+                        </h3>
+                        <p class="tenc-heading-frontpage__subsection color-white mt-4">Need help building your own
+                            team?</p>
+                        <div class="tenc-intro-main__button">
+                            <a href="https://mazegeek.com/contact-us"
+                               class="button-gradient
+                      button-gradient--simple
+                      button-gradient--intro
+                      button-gradient--no-shadow
+                      button-gradient--empty
+                      button-gradient--big-font">
+                                Tell us more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="pt-110 pb-110">
+        <div class="container grey-lines-bottom">
+            {% if record %}
+            {% for notes in record.feature_list %}
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="fw-600 h3 color-black">{{ notes.main_header }}</h2>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                {% for each in notes.mazegeek_header %}
+
+                <div class="col-12 col-md-3">
+                    <h4 class="strong mb-3 color-black">{{ each.feature1 }}</h4>
+                </div>
+
+                <div class="col-12 col-md-9 line">
+                    <p>{{ each.feature_items }}</p>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            {% endfor %}
+            {% else %}
+            {{ notFoundMessage }}
+            {% endif %}
+
+
+        </div>
+    </section>
+    <div class="bgc-gray-6 full-width">
+        <div class="container">
+            <div class="row py-5 align-items-center">
+                <div
+                        class="col-12 col-md-3 d-flex align-content-center justify-content-center justify-content-md-start py-3">
+                    <img alt="learn-more" height="150"
+                         src="https://mazegeek.com/assets/uploads/learn-more.svg"
+                         width="150"/>
+                </div>
+
+                <div class="col-12 col-md-9 py-3 text-center  text-md-left">
+                    <h3 class="color-primary h3 fs-36 lh-15 mb-4 fw-400 fs-21">Want to learn more about setting up
+                        a
+                        Process Consulting Team with us?</h3>
+                    <a href="https://mazegeek.com/contact-us" class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">
+                        Contact Us
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="pt-80 pb-80 faq">
+        <div class="container">
+            {% if record %}
+            {% for notes in record.faq %}
+            <h3 class="fw-600 mb-5">{{ notes.faq }}</h3>
+
+            <div class="row">
+                {% for each in notes.faq_body %}
+
+                <div class="col-12 col-md-6">
+                    <h4 class="fs-18">{{ each.faq_title }}</h4>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <ul class="rhomb">
+                        <li>
+                            {{ each.faq_description }}
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            {% endfor %}
+            {% else %}
+            {{ notFoundMessage }}
+            {% endif %}
+
+            <div class="text-center mt-4"><a href="#" class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">
+                Show more
+            </a></div>
+        </div>
+    </section>
+
+</main>

@@ -1,0 +1,4 @@
+title: Careers
+modelClass: Nishan\Careers\Models\Career
+toolbar:
+    buttons: reorder_toolbar

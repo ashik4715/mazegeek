@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.expertise::lang.plugin.name'
+    description: 'nishan.expertise::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-briefcase
+    homepage: ''
+navigation:
+    Expertise:
+        label: Expertises
+        url: nishan/expertise/expertises
+        icon: icon-briefcase

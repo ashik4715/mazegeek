@@ -1,0 +1,96 @@
+fields:
+    slogan:
+        label: 'Slogan & Developer Partners'
+        prompt: 'Add Developer Partners'
+        span: full
+        maxItems: '1'
+        type: repeater
+        form:
+            fields:
+                slogan_main:
+                    label: 'Main Slogan'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Main Slogan'
+                    required: 1
+                    type: textarea
+                sub_slogan:
+                    label: 'Sub Slogan'
+                    size: tiny
+                    span: full
+                    placeholder: 'Enter Sub Slogan'
+                    required: 1
+                    type: textarea
+                schedule:
+                    label: 'Schedule a meeting'
+                    span: full
+                    placeholder: 'Enter Schedule a meeting'
+                    required: 0
+                    type: text
+                dev_partner:
+                    label: 'Developer partners'
+                    prompt: 'Add Developer partners'
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            dev_logo:
+                                label: 'Developer Partner Logo'
+                                mode: file
+                                span: left
+                                required: 1
+                                type: mediafinder
+                            dev_url:
+                                label: 'Developer Partner URL'
+                                span: auto
+                                placeholder: 'Enter Developer Partner URL'
+                                type: text
+    blogs:
+        label: Blog
+        prompt: 'Add Blogs'
+        maxItems: '3'
+        span: full
+        type: repeater
+        form:
+            fields:
+                blog_title:
+                    label: 'Blog Title'
+                    span: left
+                    placeholder: 'Enter Blog Title'
+                    required: 1
+                    type: text
+                blog_photo:
+                    label: 'Blog Photo'
+                    mode: file
+                    span: auto
+                    required: 1
+                    type: mediafinder
+    partner:
+        label: Partners
+        prompt: 'Add Partners Logo'
+        span: full
+        type: repeater
+        form:
+            fields:
+                partner_logo:
+                    label: 'Partner Logo'
+                    mode: file
+                    span: auto
+                    required: 1
+                    type: mediafinder
+                partner_url:
+                    label: 'Partner URL'
+                    span: auto
+                    placeholder: 'Enter Partner URL'
+                    type: text
+    mazegeek_video:
+        label: 'Hero Banner Video'
+        mode: file
+        imageWidth: '100'
+        imageHeight: '100'
+        fileTypes: 'm4v, mp4'
+        useCaption: true
+        thumbOptions: null
+        span: left
+        required: 1
+        type: fileupload

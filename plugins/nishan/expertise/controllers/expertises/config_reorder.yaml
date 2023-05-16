@@ -1,0 +1,4 @@
+title: Expertises
+modelClass: Nishan\Expertise\Models\Expertise
+toolbar:
+    buttons: reorder_toolbar

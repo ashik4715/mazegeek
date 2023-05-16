@@ -1,0 +1,105 @@
+/*4259 - 4361*/
+
+#modal-container {
+    position: fixed;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 999
+}
+
+#modal-container.active {
+    z-index: 1000;
+    transform: scale(1)
+}
+
+#modal-container.active .modal-background {
+    background: rgba(0, 0, 0, .7)
+}
+
+#modal-container.active .modal-background--black {
+    background: #000
+}
+
+#modal-container.active .modal-background .modal {
+    animation: blowUpModal .5s cubic-bezier(.165, .84, .44, 1) forwards
+}
+
+#modal-container.active .modal-background .modal--full {
+    width: 100%
+}
+
+#modal-container.active.out .modal-background .modal {
+    animation: blowUpModalTwo .5s cubic-bezier(.165, .84, .44, 1) forwards
+}
+
+#modal-container .modal-background {
+    background: rgba(0, 0, 0, .8);
+    text-align: center;
+    vertical-align: middle
+}
+
+#modal-container .modal-background .modal {
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+    padding: 0
+}
+
+.close {
+    position: absolute;
+    cursor: pointer;
+    top: -40px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    z-index: 1
+}
+
+@media only screen and (min-width: 1024px) {
+    .close {
+        top: -40px;
+        right: -20px
+    }
+}
+
+.close--on-full-modal {
+    background: #302152;
+    top: 40px;
+    right: 25px
+}
+
+@media only screen and (min-width: 1024px) {
+    .close--on-full-modal {
+        top: 60px;
+        right: 40px
+    }
+}
+
+.close:hover:after, .close:hover:before {
+    background: #fff
+}
+
+.close:after, .close:before {
+    content: "";
+    position: absolute;
+    height: 1.7px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #a7a7a7;
+    transition: background .2s ease
+}
+
+.close:before {
+    transform: rotate(-45deg)
+}
+
+.close:after {
+    transform: rotate(45deg)
+}

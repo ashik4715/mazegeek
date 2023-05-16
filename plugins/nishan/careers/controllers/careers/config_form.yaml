@@ -1,0 +1,10 @@
+name: Careers
+form: $/nishan/careers/models/career/fields.yaml
+modelClass: Nishan\Careers\Models\Career
+defaultRedirect: nishan/careers/careers
+create:
+    redirect: 'nishan/careers/careers/update/:id'
+    redirectClose: nishan/careers/careers
+update:
+    redirect: nishan/careers/careers
+    redirectClose: nishan/careers/careers

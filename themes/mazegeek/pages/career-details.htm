@@ -1,0 +1,649 @@
+title = "Career-details"
+url = "/career/:slug"
+layout = "default"
+description = "In this page you will find all about Mazegeek BD limited"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[builderDetails]
+modelClass = "Nishan\Careers\Models\Career"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "id"
+displayColumn = "id"
+notFoundMessage = "Record not found"
+==
+{% put styles %}
+<style>
+
+    .tenc-intro {
+        /* height: 100vh; */
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 4000px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+</style>
+<style>
+    .tenc-intro-main__wrapper {
+        max-width: 100%;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 90%;
+    }
+
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+        }
+
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+    }
+
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+
+    .more-service {
+        text-decoration: none
+    }
+
+</style>
+<style>
+
+    /*---------------------------------------------
+        Job Details
+    ---------------------------------------------*/
+
+    .padding-top-60 {
+        padding-top: 60px;
+    }
+
+    .section-padding-bottom {
+        padding-bottom: 120px;
+    }
+
+    .details-information {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .section-padding-60 {
+        padding: 60px 0;
+    }
+
+    .job-listing-details {
+        background: #ffffff;
+        padding: 30px;
+        -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.03);
+    }
+
+    .job-title-and-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .job-title-and-info .title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+
+    .job-title-and-info .title .title-body h4 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        padding-bottom: 15px;
+    }
+
+    .job-title-and-info .title .title-body .info span {
+        font-size: .9rem;
+        font-weight: 400;
+        margin-right: 15px;
+        color: #6f7484;
+    }
+
+    .job-title-and-info .title .title-body .info span svg {
+        height: 15px;
+        margin-right: 5px;
+        color: #aaa;
+    }
+
+    .job-title-and-info .title .title-body .info span.full-time svg {
+        color: #ff9247;
+    }
+
+    .job-title-and-info .title .title-body .info span.temporary svg {
+        color: #ff5377;
+    }
+
+    .job-title-and-info .title .title-body .info span.part-time svg {
+        color: #6e75d0;
+    }
+
+    .job-title-and-info .title .title-body .info span.freelance svg {
+        color: #82d219;
+    }
+
+    .job-title-and-info .buttons .apply {
+        padding: 15px 30px;
+        border-radius: 3px;
+        background: #3cb47c;
+        color: #ffffff;
+        font-size: 1rem;
+        border: 1px solid rgba(36, 109, 248, 0.15);
+        font-weight: 600;
+    }
+
+    .job-title-and-info .buttons .apply svg {
+        height: 18px;
+        margin-left: 10px;
+    }
+
+    .job-title-and-info .buttons .apply:hover {
+        color: #ffffff;
+        background: #3cb47c;
+    }
+
+    .details-section + .details-section {
+        margin-top: 60px;
+    }
+
+
+    .job-title-and-info .buttons .save svg {
+        height: 18px;
+        margin-right: 7px;
+    }
+
+
+    .responsibilities ul li + li, .edication-and-experience ul li + li, .other-benifit ul li + li {
+        margin-top: 8px;
+    }
+
+    .responsibilities ul,
+    .edication-and-experience ul,
+    .other-benifit ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 0;
+    }
+
+    .responsibilities ul li,
+    .edication-and-experience ul li,
+    .other-benifit ul li {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #6f7484;
+        position: relative;
+        padding-left: 5px;
+    }
+
+
+    .responsibilities ul li + li,
+    .edication-and-experience ul li + li,
+    .other-benifit ul li + li {
+        margin-top: 8px;
+    }
+
+    .job-apply-buttons a {
+        padding: 14px 30px;
+        border-radius: 3px;
+        border: 1px solid;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .job-apply-buttons .apply {
+        background: #3cb47c;
+        color: #ffffff;
+        border-color: #3cb47c;
+        margin-right: 10px;
+    }
+
+
+    .job-apply-buttons .email svg {
+        height: 15px;
+    }
+
+    .company-information {
+        margin-top: 60px;
+    }
+
+    .company-information ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 0;
+    }
+
+    .company-information ul li {
+        font-size: 1rem;
+        color: #6f7484;
+    }
+
+    .company-information ul li a {
+        color: #246df8;
+        text-decoration: underline;
+    }
+
+    .company-information ul li span {
+
+        font-weight: 500;
+        margin-right: 5px;
+        color: #232630;
+    }
+
+    .company-information ul li + li {
+        margin-top: 8px;
+    }
+
+    .job-summary {
+        padding: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 3px;
+        background-image: -webkit-gradient(linear, right top, left top, from(rgba(247, 249, 252, 0)), to(#f7f9fc));
+        background-image: -webkit-linear-gradient(right, rgba(247, 249, 252, 0), #f7f9fc);
+        background-image: -o-linear-gradient(right, rgba(247, 249, 252, 0), #f7f9fc);
+        background-image: linear-gradient(to left, rgba(247, 249, 252, 0), #f7f9fc);
+    }
+
+    .job-summary h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .job-summary ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 0;
+    }
+
+    .job-summary ul li {
+        font-size: 1rem;
+        color: #6f7484;
+    }
+
+    .job-summary ul li span {
+
+        font-weight: 500;
+        margin-right: 5px;
+        color: #232630;
+    }
+
+    .job-summary ul li + li {
+        margin-top: 8px;
+    }
+
+
+    .share-job-post .share i {
+        margin-right: 10px;
+    }
+
+    .share-job-post a {
+        margin-right: 12px;
+        color: #6f7484;
+    }
+
+    .share-job-post a:hover {
+        color: #246df8;
+    }
+
+
+    .information-and-share .buttons {
+        margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+
+    .information-and-share .buttons .print svg,
+    .information-and-share .buttons .report svg {
+        height: 15px;
+    }
+
+    .information-and-share .job-location h4 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+
+    .job-apply-buttons {
+        margin-top: 45px;
+    }
+
+    .job-apply-buttons a {
+        margin-top: 15px;
+    }
+
+    @media (max-width: 991px) {
+        .job-title-and-info {
+            display: block;
+        }
+
+        .job-title-and-info .buttons {
+            margin-top: 30px;
+        }
+
+        .information-and-share {
+            margin-top: 60px;
+        }
+    }
+
+    .custom-file-upload input[type="file"] {
+        display: none;
+    }
+
+    .custom-file-upload .custom-file-upload1 {
+        box-shadow: 1px 1px 1px 1px #cccccc5e;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+    }
+
+    .fa-cloud-upload {
+        color: #3cb37c;
+    }
+
+</style>
+{% endput %}
+
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% put meta %}
+{% if record %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endput %}
+
+<main role="main" id="main">
+    <section class="tenc-intro tenc-intro--how-we-work">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper
+                tenc-intro-main__wrapper--short">
+                <div class="tenc-intro-main mt-4">
+
+                    <h1 class="h2 fw-600 text-center tenc-intro-main__title">
+        <span class="tenc-intro-main__title-part color-white">
+          Career
+        </span>
+                    </h1>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="alice-bg padding-top-60 section-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="job-listing-details">
+                        <div class="job-title-and-info">
+                            <div class="title">
+                                <div class="title-body">
+                                    <h4 class="color-black">Graphic Designer</h4>
+                                    <div class="info">
+                                            <span class="office-location"><a href="#"><svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="feather feather-map-pin"><path
+                                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle
+                                                    cx="12" cy="10"
+                                                    r="3"></circle></svg>Banani, Dhaka</a></span>
+                                        <span class="job-type full-time"><a href="#"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-clock"><circle cx="12" cy="12"
+                                                                                      r="10"></circle><polyline
+                                                points="12 6 12 12 16 14"></polyline></svg>Full Time</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>Send Your CV at <span class="color-primary">info@mazegeek.com</span></div>
+                            <div class="buttons" data-aos="fade-left" style="display: none">
+                                <a class="apply" href="#" data-toggle="modal" data-target="#exampleModalLong">Apply
+                                    Online</a>
+                            </div>
+                        </div>
+                        <div class="details-information section-padding-60">
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-8">
+                                    <div class="description details-section">
+                                        <h4 class="color-black">Job Description</h4>
+                                        <p>MazeGeek's in-house Design team is responsible for the development and
+                                            implementation of design solutions for different internal marketing
+                                            collaterals; advertising and promotions; sales; support and training
+                                            materials.<br><br>
+                                            The team ensure to have a keen understanding of organization’s strategic
+                                            goals, marketing goals, branding, a strong grasp of business needs, and
+                                            how the company want to be perceived by its consumers. The team ensure
+                                            all artwork produced meets the needs, requirements and brand values.
+                                            The team includes Graphic Designers, Illustrators, Web Designers and
+                                            Developer, UX Designer, Animators and Video production/post production
+                                            expertise.</p>
+
+                                    </div>
+                                    <div class="responsibilities details-section">
+                                        <h4 class="color-black">Responsibilities</h4>
+                                        <ul>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Adverts and Flyers for both Print and Digital Media
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Static and animated Ads for website, blogs and Social Media
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Email newsletters for promotions, information and announcements
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Website design, development and maintenance
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Display booths, backdrops, stickers and different types of banners for events
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Catalogs, Brochures and Postcards
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Animation (GIF and Video)
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Multimedia Production including filming, editing and post-production
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Training Videos
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="responsibilities details-section">
+                                        <h4 class="color-black">What we are looking for:</h4>
+                                        <ul>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Ability to utilise ideation skills, software knowledge, and innovation
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Visual problem solver and good understanding of target audiences’ needs and goals
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Bachelor’s degree required; preferably in CSE or related field
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Strong portfolio which shows experience with a range of Graphics software and materials
+                                            </li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Strong communications skills
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="other-benifit details-section">
+                                        <h4 class="color-black">Benefits</h4>
+                                        <ul>
+
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>2 days of weekend</li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>2 annual performanc Bonuses</li>
+                                            <li><i class="fa fa-dot-circle-o mr-1"></i>Lunch &amp; Snacks</li>
+                                        </ul>
+                                    </div>
+                                    <h4 class="h4 mt-5">Send Your CV at <span class="color-primary">info@mazegeek.com</span></h4>
+
+                                    <div class="job-apply-buttons" style="display: none">
+                                        <a href="#" data-toggle="modal" data-target="#exampleModalLong" class="apply">Apply Online</a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 offset-xl-1 col-lg-4">
+                                    <div class="information-and-share">
+                                        <div class="job-summary">
+                                            <h4 class="color-black">Job Summary</h4>
+                                            <ul>
+                                                <li><span>Published on:</span> Mar 6, 2019</li>
+                                                <li><span>Vacancy:</span> 02</li>
+                                                <li><span>Employment Status:</span> Full-time</li>
+                                                <li><span>Experience:</span> 1 to 3 year(s)</li>
+                                                <li><span>Job Location:</span> Banani, Dhaka</li>
+
+                                                <li><span>Gender:</span> Any</li>
+                                                <li><span>Application Deadline:</span> April 25, 2019</li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- The Modal -->
+<div class="modal fade show" id="exampleModalLong" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Application Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Experience (in years)" class="form-control">
+                    </div>
+                    <div class="more-option">
+
+                        <div class="custom-file-upload">
+
+                            <label for="file-upload" class="custom-file-upload1">
+                                <i class="fa fa-cloud-upload"></i> Upload Resume
+                            </label>
+                            <input id="file-upload" type="file"/>
+                        </div>
+
+                        <br>
+                    </div>
+
+                    <button class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% put scripts %}
+
+{% endput %}

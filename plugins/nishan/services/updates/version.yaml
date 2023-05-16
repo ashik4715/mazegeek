@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - update_nishan_services
+    - migration102.php
+1.0.3:
+    - update_nishan_services
+    - migration103.php
+1.0.4:
+    - update_nishan_services
+    - migration104.php
+1.0.5:
+    - update_nishan_services
+    - migration105.php
+1.0.6:
+    - update_nishan_services
+    - migration106.php
+1.0.7:
+    - update_nishan_services
+    - migration107.php
+1.0.8:
+    - update_nishan_services
+    - migration108.php
+1.0.9:
+    - 'Updated table nishan_services_'
+    - builder_table_update_nishan_services_.php

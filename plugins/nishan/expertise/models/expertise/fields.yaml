@@ -1,0 +1,62 @@
+fields:
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        span: full
+        maxItems: '1'
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    description:
+        label: 'Expertise Description'
+        span: full
+        size: small
+        placeholder: 'Enter Expertise Description'
+        type: textarea
+    industries:
+        label: Industries
+        prompt: 'Add Industries'
+        span: full
+        type: repeater
+        form:
+            fields:
+                industries_item:
+                    label: 'Industries Item'
+                    span: full
+                    placeholder: 'Enter Industries Item'
+                    type: text
+    technologies:
+        label: Technologies
+        prompt: 'Add Technologies'
+        span: full
+        type: repeater
+        form:
+            fields:
+                technology_item:
+                    label: 'Technology Item'
+                    span: full
+                    placeholder: 'Enter Technology Item'
+                    type: text
+                color_icon:
+                    label: 'Color Icon'
+                    mode: file
+                    span: auto
+                    type: mediafinder
+                bw_icon:
+                    label: 'Black & White Icon'
+                    mode: file
+                    span: auto
+                    type: mediafinder

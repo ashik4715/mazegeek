@@ -1,0 +1,178 @@
+fields:
+    name:
+        label: 'Service Title'
+        span: full
+        type: text
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        span: full
+        maxItems: '1'
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    description:
+        label: 'Service Description'
+        span: full
+        size: ''
+        type: textarea
+    slug:
+        label: Slug
+        span: full
+        preset:
+            field: name
+            type: slug
+        type: text
+    icon:
+        label: 'Service Icon'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        fileTypes: 'svg, jpg, png'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    details:
+        label: 'Short Note'
+        size: ''
+        span: full
+        placeholder: 'Enter Short Note'
+        required: 0
+        type: textarea
+    notes:
+        label: Feature
+        prompt: 'Add New Feature'
+        maxItems: '1'
+        span: full
+        disabled: 0
+        hidden: 0
+        type: repeater
+        form:
+            fields:
+                main_feature_short:
+                    label: 'Main Feature Short Note'
+                    span: left
+                    placeholder: 'Enter Feature Short Note'
+                    type: text
+                mainfeature_description:
+                    label: 'Main Feature Description'
+                    size: ''
+                    span: right
+                    placeholder: 'Enter Feature Description'
+                    type: textarea
+                main_feature:
+                    label: 'Main Features'
+                    prompt: 'Add Feature Repeater'
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            feature_shortDescription:
+                                label: 'Feature Short Description'
+                                size: ''
+                                span: full
+                                placeholder: 'Enter Feature Short Description'
+                                type: textarea
+                            feature_title:
+                                label: 'Feature Title'
+                                span: full
+                                placeholder: 'Enter Feature Title'
+                                required: 1
+                                type: text
+                            feature_subtitle:
+                                label: 'Feature Subtitle'
+                                span: full
+                                placeholder: 'Enter Feature Subtitle'
+                                type: text
+                            feature_list:
+                                label: 'Feature Description List'
+                                prompt: 'Add new item'
+                                span: full
+                                type: repeater
+                                form:
+                                    fields:
+                                        feature_list:
+                                            label: 'Feature Description List'
+                                            size: ''
+                                            span: full
+                                            placeholder: 'Enter Feature Description List'
+                                            required: 1
+                                            type: textarea
+    feature_list:
+        label: 'Why Mazegeek?'
+        prompt: 'Add new item'
+        span: full
+        disabled: 0
+        maxItems: '1'
+        type: repeater
+        form:
+            fields:
+                main_header:
+                    label: Header
+                    span: full
+                    placeholder: 'Enter Header'
+                    type: text
+                mazegeek_header:
+                    label: 'Mazegeek Header'
+                    prompt: 'Add new item'
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            feature1:
+                                label: Feature
+                                span: left
+                                placeholder: 'Enter Feature Header'
+                                type: text
+                            feature_items:
+                                label: 'Feature Description'
+                                size: ''
+                                span: right
+                                placeholder: 'Enter Feature Description'
+                                type: textarea
+    faq:
+        label: FAQ
+        prompt: 'Add new FAQ'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                faq:
+                    label: FAQ
+                    span: full
+                    type: text
+                faq_body:
+                    label: 'FAQ Body'
+                    prompt: 'Add FAQ Body'
+                    span: full
+                    type: repeater
+                    form:
+                        fields:
+                            faq_title:
+                                label: 'FAQ Title'
+                                span: left
+                                placeholder: 'Enter FAQ Title'
+                                type: text
+                            faq_description:
+                                label: 'FAQ Description'
+                                size: ''
+                                span: right
+                                placeholder: 'Enter FAQ Description'
+                                type: textarea

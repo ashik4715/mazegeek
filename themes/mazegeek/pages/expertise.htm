@@ -1,0 +1,415 @@
+title = "Expertise"
+url = "/expertise"
+layout = "default"
+description = "MazeGeek is best known as an E-commerce web development company. But our software development expertise surpasses our expertise in web development."
+is_hidden = 0
+
+[builderList ExpertiseList]
+modelClass = "Nishan\Expertise\Models\Expertise"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "description"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+{% put styles %}
+<style>
+    .tenc-intro--how-we-work {
+        background: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.85) 35%, rgba(1, 32, 17, 0.7) 70%, rgba(1, 32, 17, 0.55)), url(themes/mazegeek/assets/images/mgbanner/carrer_banner.jpg);
+    }
+</style>
+<style>
+    .tenc-intro {
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+        .tenc-intro {
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 4000px) {
+        .tenc-intro {
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+</style>
+<style>
+    .tenc-intro-main__wrapper {
+        max-width: 100%;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 90%;
+    }
+
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+        }
+
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+    }
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .more-service {
+        text-decoration: none
+    }
+
+    .service-cont {
+        padding: 5px 50px 0px 50px !important;
+    }
+
+</style>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .techs .tech {
+        border: 0px solid #f3f3f3;
+        box-shadow: 2px 3px 22px rgba(46, 61, 73, .15);
+        border-radius: 10px;
+        background: white;
+    }
+
+    .industry ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .industry ul li {
+        border-radius: 6px;
+        /*cursor: pointer;*/
+        text-align: center;
+        position: relative;
+        float: left;
+        display: block;
+        margin-right: 1.69491525%;
+        width: 19.49152542%;
+        height: 7.5rem;
+        color: #495057;
+
+    }
+
+    @media only screen and (max-width: 767px) {
+        .industry ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+
+        .industry ul li {
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            float: left;
+            display: block;
+            margin-right: 0%;
+            margin-bottom: 15px;
+            width: 100%;
+            height: 6rem;
+            color: #495057;
+
+        }
+    }
+
+    .industry ul li:nth-child(5n+1) {
+        border-top: 1rem solid #a951ed;
+    }
+
+    .industry ul li:nth-child(5n+2) {
+        border-top: 1rem solid #ff8bab;
+    }
+
+    .industry ul li:nth-child(5n+3) {
+        border-top: 1rem solid #ffae0c;
+    }
+
+    .industry ul li:nth-child(5n+4) {
+        border-top: 1rem solid #02ccba;
+    }
+
+    .industry ul li:nth-child(5n+5) {
+        border-top: 1rem solid #ff5483;
+    }
+
+    .school-card {
+        background-color: #fff;
+        box-shadow: 2px 3px 22px rgba(46, 61, 73, .15);
+        transition: box-shadow .3s;
+    }
+
+    .blog-list .blog-big .blog-content {
+        border: 0px solid #bdbdbd;
+        border-radius: 8px;
+    }
+
+    .blog-list .blog-big:hover .blog-content {
+        border: 0px solid #34b57c;
+    }
+
+    .blog-list .blog-big .blog-content::before {
+        border-radius: 8px;
+    }
+
+    a:not([href]):not([tabindex]) {
+        color: #24272a;
+        text-decoration: none;
+    }
+
+    .tabs a.categories-list-filter-btn-active, .tabs a:hover {
+        border-bottom-color: #24272a;
+        color: #24272a;
+        text-decoration: none;
+    }
+
+    .tabs a {
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 89%;
+    }
+
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+            width: 86%;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+
+        .top-banner {
+            height: 440px;
+        }
+
+        .tenc-intro-main__buttons {
+            -ms-flex-direction: column;
+            flex-direction: column;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+
+            align-items: center;
+        }
+    }
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .more-service {
+        text-decoration: none
+    }
+
+</style>
+{% endput %}
+
+{% set records = ExpertiseList.records %}
+{% set displayColumn = ExpertiseList.displayColumn %}
+{% set noRecordsMessage = ExpertiseList.noRecordsMessage %}
+{% set detailsPage = ExpertiseList.detailsPage %}
+{% set detailsKeyColumn = ExpertiseList.detailsKeyColumn %}
+{% set detailsUrlParameter = ExpertiseList.detailsUrlParameter %}
+
+{% put meta %}
+{% for record in records %}
+{% if loop.index == 1 %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endput %}
+
+<main role="main" id="main">
+
+    <section class="tenc-intro tenc-intro--how-we-work">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper tenc-intro-main__wrapper--short">
+                <div class="tenc-intro-main mt-4">
+
+                    <h1 class="h2 fw-600 tenc-intro-main__title text-center">
+        <span class="tenc-intro-main__title-part">
+          Expertise
+        </span>
+                    </h1>
+                    <!--<div class="tenc-intro-main__content mb-0">-->
+                    <!--<h2 class="tenc-intro-main__content-copy color-white text-center">-->
+                    <!--Here you can navigate through all services we provide.&#45;&#45;}}-->
+                    <!--</h2>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bgc-gray-4 expertise pt-110 pb-5">
+        <div class="container">
+            {% for record in records %}
+
+            <div class="row">
+                {% spaceless %}
+                {% if detailsPage %}
+
+                {% endif %}
+                <p class="col-12 col-lg-10 m-auto text-center">
+                    {{ record.description }}
+                </p>
+
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-12 col-lg-12 pt-5 industry">
+                    <h4 class="pb-4 text-center color-black">Industries</h4>
+
+                    <ul style="" class="school-list"><!---->
+                        {% if record %}
+                        {% for industries in record.industries %}
+                        <li style="" class="school-card text-center ng-star-inserted">
+                            <h5 class="fw-600 mt-4 pl-2 pr-2">{{ industries.industries_item }}</h5>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+                    </ul>
+
+                </div>
+                <div class="col-12 col-lg-12 col-xl-12 pt-5">
+                    <h4 class="pb-4 text-center color-black">Technologies</h4>
+                    <div class="row techs techs-p-30">
+                        {% if record %}
+                        {% for technologies in record.technologies %}
+                        <div class="col-6 col-md-4 col-lg-2 mb-5 tech-wrap">
+                            <a
+                                    class="tech d-flex flex-column justify-content-center align-items-center">
+                                <img src="{{ technologies.bw_icon|media }}"
+                                     class="img-fluid img-main" alt="tech">
+                                <img src="{{ technologies.color_icon|media }}"
+                                     class="img-fluid img-second" alt="tech">
+
+                                <p class="mb-0 hover-hide">{{ technologies.technology_item }}</p>
+                                <p class="hover-show mb-0">{{ technologies.technology_item }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                        {% endif %}
+
+                    </div>
+                    <div class="text-center">
+                        <a href="#" class="button-gradient
+                        button-gradient--simple
+                        button-gradient--empty
+                        button-gradient--no-shadow
+                        button-gradient--big-font
+                        button-gradient--dark-text">
+                            View All Technologies
+                        </a>
+                    </div>
+
+                    <!--<div class=" text-center"><a class="btn btn-t" href="#" target="_blank">View All</a></div>-->
+                </div>
+            </div>
+
+            {% endspaceless %}
+            {% else %}
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
+
+{% put scripts %}
+
+{% endput %}

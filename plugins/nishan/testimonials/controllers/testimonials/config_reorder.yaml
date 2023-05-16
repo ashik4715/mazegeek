@@ -1,0 +1,4 @@
+title: Testimonials
+modelClass: Nishan\Testimonials\Models\Testimonial
+toolbar:
+    buttons: reorder_toolbar

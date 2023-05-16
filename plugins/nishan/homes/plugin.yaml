@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.homes::lang.plugin.name'
+    description: 'nishan.homes::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-home
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Home
+        url: nishan/homes/homes
+        icon: icon-home

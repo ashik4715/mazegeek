@@ -1,0 +1,300 @@
+title = "Portfolio-details"
+url = "/:slug"
+layout = "default"
+description = "Portfolio Details goes here"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Nishan\Portfolio\Models\Portfolio"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% put styles %}
+<link href="{{ 'assets/css/module/typography.css'|theme }}" rel="stylesheet">
+<link href="{{ 'assets/css/module/portfolio-details.css'|theme }}" rel="stylesheet">-->
+<style>
+    .tenc-universal-template-how-we-work-wrapper {
+        background-image: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.90) 35%, rgba(1, 32, 17, 0.8) 70%, rgba(1, 32, 17, 0.6)), url(/assets/images/mgbanner/service-details.jpg);
+    }
+</style>
+<style>
+    .tenc-intro {
+        /* height: 100vh; */
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+    @media screen and (min-width: 768px) and (max-width: 4000px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+</style>
+<style>
+    .tenc-intro-main__wrapper {
+        max-width: 100%;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 90%;
+    }
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+        }
+
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+    }
+
+
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+
+    .more-service{text-decoration: none}
+
+</style>
+{% endput %}
+
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% put meta %}
+{% if record %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endput %}
+
+<main role="main" id="main">
+
+    <section class="tenc-intro tenc-intro--how-we-work">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper
+                tenc-intro-main__wrapper--short">
+                <div class="tenc-intro-main mt-4">
+
+                    <h1 class="h2 fw-600 tenc-intro-main__title text-center">
+        <span class="tenc-intro-main__title-part">
+            {% if record %}
+                {{ record.name}}
+                <br>
+                <h2 class="tenc-intro-main__content-copy color-white">
+
+                </h2>
+            {% else %}
+    {{ notFoundMessage }}
+{% endif %}
+
+        </span>
+                    </h1>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tenc-portfolio-entry-problem-solution-wrapper">
+        <div class="continer">
+
+            {% if record %}
+            {% for overviews in record.overview %}
+            <div class="tenc-portfolio-entry-overview-wrapper">
+
+                <div class="tenc-portfolio-entry-overview">
+                    <div class="tenc-portfolio-entry-overview__main-info-wrapper">
+        <span class="tenc-simple-portfolio-entry-preheading
+                     tenc-simple-portfolio-entry-preheading--margin-bottom">Overview</span>
+
+                        <p class="tenc-copy">
+                            {{ overviews.overview_description }}
+                        </p>
+                        <div class="tenc-portfolio-entry-overview__main-info">
+                            <div>
+                                <span class="tenc-simple-portfolio-entry-preheading">Project Name</span>
+                                <p class="tenc-subheading tenc-subheading--normalcase-sm">
+                                    {{ overviews.project_name }}
+                                </p>
+                            </div>
+                            <div>
+                                <span class="tenc-simple-portfolio-entry-preheading">Website</span>
+                                <a href="https://staging-mg001.vinndo.com/" target="_blank">
+                                    <p class="tenc-subheading tenc-subheading--normalcase-sm">
+                                        {{ overviews.website }}
+                                    </p>
+                                </a>
+                            </div>
+                            <div>
+                                <span class="tenc-simple-portfolio-entry-preheading">Services</span>
+                                <p class="tenc-subheading tenc-subheading--normalcase-sm">
+                                    {% for service in overviews.services %}
+                                      {{ service.service_item }}
+                                    <br/>
+                                    {% endfor %}
+                                </p>
+                            </div>
+                            <div>
+                                <span class="tenc-simple-portfolio-entry-preheading">Type</span>
+                                <p class="tenc-subheading tenc-subheading--normalcase-sm">{{ overviews.type }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tenc-portfolio-entry-overview-industry">
+        <span class="tenc-simple-portfolio-entry-preheading
+                     tenc-simple-portfolio-entry-preheading--margin-bottom">Industry</span>
+                        <div class="tenc-portfolio-entry-overview-industry__image-wrapper">
+                            <img src="{{ overviews.industry_image|media }}"
+                                 alt="Industry icon">
+                            <span class="tenc-portfolio-entry-overview-industry-name color-black">AUTOMOTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+            {% else %}
+            {{ notFoundMessage }}
+            {% endif %}
+        </div>
+    </section>
+    <section
+            class="tenc-portfolio-entry-functionalities-wrapper tenc-portfolio-entry-functionalities-wrapper--trust-stamp-case-study">
+        <div class="continer">
+            {% if record %}
+
+            <h2 class="h1 pb-4 pb-md-5 text-center color-black">{{ record.function_header }}</h2>
+
+            {% else %}
+            {{ notFoundMessage }}
+            {% endif %}
+            <div class="tenc-portfolio-entry-functionalities tenc-portfolio-entry-functionalities--trust-stamp-case-study">
+
+                {% if record %}
+                {% for functions in record.function %}
+                <div class="tenc-portfolio-entry-functionalities-box
+                    tenc-swiper__item
+                    tenc-animated--fadeSequence">
+                    <div class="tenc-portfolio-entry-functionalities-box-content">
+                        <div class="swipe-for-more">Swipe<br>for more</div>
+                        <span class="tenc-simple-portfolio-entry-preheading">{{ functions.key_header }}</span>
+                        <h2 class="tenc-heading tenc-heading--black tenc-portfolio-entry-functionalities-title">
+                            {{ functions.key_title }}
+                        </h2>
+                        <p class="tenc-copy tenc-portfolio-entry-functionalities-copy">
+                            {{ functions.key_description }}
+                        </p>
+                    </div>
+                    <img
+                            class="tenc-portfolio-entry-functionalities-box-image tenc-portfolio-entry-functionalities-box-image--tablet"
+                            src="{{ functions.key_image|media }}"
+                            srcset="{{ functions.key_image|media }} 2x,
+                       {{ functions.key_image|media }} 3x"
+                            alt="Functionalities image">
+                    <img
+                            class="tenc-portfolio-entry-functionalities-box-image tenc-portfolio-entry-functionalities-box-image--mobile"
+                            src="{{ functions.key_image|media }}"
+                            srcset="{{ functions.key_image|media }} 2x,
+                       {{ functions.key_image|media }} 3x"
+                            alt="Functionalities image">
+                    <img
+                            class="tenc-portfolio-entry-functionalities-box-image tenc-portfolio-entry-functionalities-box-image--desktop"
+                            src="{{ functions.key_image|media }}"
+                            srcset="{{ functions.key_image|media }} 2x,
+                       {{ functions.key_image|media }} 3x"
+                            alt="Functionalities image">
+
+                    <div class="tenc-portfolio-entry-functionalities-box__swiper
+                      tenc-portfolio-entry-functionalities-box__swiper--left"
+                         data-element="swiper-left">
+                    </div>
+                    <div class="tenc-portfolio-entry-functionalities-box__swiper
+                      tenc-portfolio-entry-functionalities-box__swiper--right"
+                         data-element="swiper-right">
+                    </div>
+                </div>
+                {% endfor %}
+
+                <div class="tenc-swiper-tool__controller
+                  tenc-animated--fadeUp
+                  tenc-animated--delay4">
+                    <img class="tenc-swiper__swipe-arrow-left
+                  tenc-swiper-tool__arrow-left"
+                         src="themes/mazegeek/assets//wp-content/themes/thegem/dist/images/arrow-dark.svg" alt=""
+                         style="transform: rotate(180deg)" data-element="swiper-left">
+                    <div class="tenc-swiper-tool__progressbar">
+                        <div class="tenc-swiper__swipe-progressbar--color
+                      tenc-swiper-tool__progressbar--color" data-element="tools-progressbar">
+                        </div>
+                    </div>
+                    <img class="tenc-swiper__swipe-arrow-right
+                    tenc-swiper-tool__arrow-right"
+                         src="themes/mazegeek/assets/wp-content/themes/thegem/dist/images/arrow-dark.svg" alt=""
+                         data-element="swiper-right">
+                </div>
+            </div>
+
+
+            {% else %}
+            {{ notFoundMessage }}
+            {% endif %}
+        </div>
+    </section>
+    <br>
+
+</main>

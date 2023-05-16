@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.services::lang.plugin.name'
+    description: 'nishan.services::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-support
+    homepage: ''
+navigation:
+    Services:
+        label: 'nishan.services::lang.plugin.name'
+        url: nishan/services/services
+        icon: icon-support

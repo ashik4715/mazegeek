@@ -1,0 +1,262 @@
+/*23709*/
+.tenc-arrow {
+    width: 24px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: -1px;
+}
+.tenc-arrow--purple {
+    background: url(../../../assets/images/arrow-purple.svg) 0 0 no-repeat;
+}
+
+.tenc-arrow--white {
+    background: url(../../../assets/images/arrow-white.svg) 0 0 no-repeat;
+}
+
+.tenc-case-studies--simple {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 30px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-case-studies--simple {
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+.tenc-case-studies--simple-wrapper {
+    background: #fff;
+    color: #000;
+    padding: 70px 0
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-case-studies--simple-wrapper {
+        padding: 70px 0 100px
+    }
+}
+
+.tenc-case-studies--simple__item {
+    width: 100%;
+    margin: 30px 0;
+    overflow: hidden
+}
+
+.tenc-case-studies--simple__item .tenc-simple-portfolio-entry-preheading {
+    margin-right: 8px
+}
+
+.tenc-case-studies--simple__item-background {
+    height: 330px;
+    width: auto;
+    margin-bottom: 20px;
+    transition: all .2s ease;
+    position: relative;
+    overflow: hidden
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-case-studies--simple__item-background {
+        height: 300px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-case-studies--simple__item-background {
+        height: 230px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-case-studies--simple__item-background {
+        height: 280px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-case-studies--simple__item-background {
+        height: 390px
+    }
+}
+
+.tenc-case-studies--simple__item-background img.app-preview {
+    height: inherit;
+    position: absolute
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.left {
+    left: 0
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.right {
+    right: 0
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.adshares {
+    height: 86%;
+    top: 8%
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.ets {
+    height: 90%;
+    top: 10%
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.trusted-mail {
+    top: calc(50% + 20px)
+}
+
+@media only screen and (max-width: 420px) {
+    .tenc-case-studies--simple__item-background img.app-preview.trust-stamp {
+        right: -60px
+    }
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.royals {
+    margin-top: 20px
+}
+
+.tenc-case-studies--simple__item-background img.app-preview.timeion {
+    max-width: 90%
+}
+
+@media only screen and (max-width: 420px) {
+    .tenc-case-studies--simple__item-background img.app-preview.timeion {
+        left: 230px
+    }
+}
+
+.tenc-case-studies--simple__item-background > .tenc-arrow {
+    opacity: 0;
+    transition: all .2s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 66px
+}
+
+.tenc-case-studies--simple__item-background:hover > .tenc-arrow {
+    opacity: 1
+}
+
+.tenc-case-studies--simple__item-background--callersmart {
+    background: linear-gradient(52deg, #0079d5, #1e9bfa)
+}
+
+.tenc-case-studies--simple__item-background--timeion {
+    background: linear-gradient(39deg, #f47e6e, #fcbc74)
+}
+
+.tenc-case-studies--simple__item-background--zapp {
+    background: linear-gradient(90deg, #00b85a, #00de6c)
+}
+
+.tenc-case-studies--simple__item-background--glucosemama {
+    background: linear-gradient(90deg, #a0bafd, #acd8fa)
+}
+
+.tenc-case-studies--simple__item-background--adshares {
+    background: linear-gradient(180deg, #eceff6, #d4d9e5)
+}
+
+.tenc-case-studies--simple__item-background--trust-stamp {
+    background-image: linear-gradient(305deg, #0e8d5f 50%, #3fec84)
+}
+
+.tenc-case-studies--simple__item-background--trusted-mail {
+    background-image: linear-gradient(45deg, #dbe2ec, #8e97a6)
+}
+
+.tenc-case-studies--simple__item-background--goseqit {
+    background: linear-gradient(45deg, #efcd87, #f6b659)
+}
+
+.tenc-case-studies--simple__item-background--royals {
+    background: linear-gradient(135deg, #f8edda, #fed6a6)
+}
+
+.tenc-case-studies--simple__item-background--ets, .tenc-case-studies--simple__item-background--iplay {
+    background: #efeff5
+}
+
+.tenc-case-studies--simple__item-background--iplay img {
+    width: 100%;
+    height: auto !important
+}
+
+.tenc-case-studies--simple__item-background .tint {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    left: 0;
+    transition: all .2s ease;
+    opacity: 0
+}
+
+.tenc-case-studies--simple__item-background:hover .tint {
+    opacity: .5;
+    background: linear-gradient(204deg, #110827, #100727)
+}
+
+.tenc-case-studies--simple__item-app-name {
+    font-size: 26px;
+    /*font-size: 2.6rem;*/
+    /*font-family: BioSans-Regular, sans-serif;*/
+    font-style: normal;
+    font-weight: 300;
+    margin: 20px 0;
+    letter-spacing: -.6px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-case-studies--simple__item {
+        width: calc(50% - 40px);
+        margin: 30px 20px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-case-studies--simple__item {
+        width: calc(33.33% - 40px);
+        margin: 0 20px 30px
+    }
+}
+
+.tenc-case-studies--simple-link {
+    margin-top: 15px
+}
+
+.tenc-case-studies--simple-more-button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-case-studies--simple__shortlist:last-of-type {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-case-studies--simple__shortlist:last-of-type {
+        display: block
+    }
+}

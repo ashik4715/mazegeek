@@ -1,0 +1,10 @@
+name: Mazegeek
+form: $/nishan/mazegeek/models/mazegeek/fields.yaml
+modelClass: Nishan\Mazegeek\Models\Mazegeek
+defaultRedirect: nishan/mazegeek/mazegeek
+create:
+    redirect: 'nishan/mazegeek/mazegeek/update/:id'
+    redirectClose: nishan/mazegeek/mazegeek
+update:
+    redirect: nishan/mazegeek/mazegeek
+    redirectClose: nishan/mazegeek/mazegeek

@@ -1,0 +1,12 @@
+list: $/nishan/mazegeek/models/mazegeek/columns.yaml
+modelClass: Nishan\Mazegeek\Models\Mazegeek
+title: Mazegeek
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'nishan/mazegeek/mazegeek/update/:id'

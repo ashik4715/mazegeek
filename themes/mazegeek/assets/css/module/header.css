@@ -1,0 +1,369 @@
+/*5543 - 5886*/
+.tenc-header {
+    padding: 0;
+    position: absolute;
+    transform: all .2s cubic-bezier(0, 1, .5, 1);
+    width: 100%;
+    height: 90px;
+    z-index: 100
+}
+
+.tenc-header--blog .tenc-header__navigation--back {
+    display: none
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header--blog .tenc-header__navigation--back {
+        display: inline-block
+    }
+}
+
+.tenc-header--blog a[href*="blog/category/design"], .tenc-header--blog a[href*="blog/category/uncategorized"] {
+    display: none
+}
+
+.tenc-header__cookies {
+    display: none;
+    font-size: 10px;
+    font-size: 1rem;
+    background: #2d2b37;
+    line-height: 2em;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 101
+}
+
+.tenc-header__cookies--visible {
+    display: block
+}
+
+.tenc-header__cookies-button {
+    background: #5e1fe4;
+    border: none;
+    color: #fff;
+    line-height: 1em;
+    padding: 5px 10px;
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    transition: all .2s ease-in
+}
+
+.tenc-header__cookies-button:active, .tenc-header__cookies-button:focus, .tenc-header__cookies-button:hover {
+    background: #00d69e;
+    color: #2d2b37;
+    outline: none
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-header__cookies-button {
+        display: inline-block;
+        margin-left: 5px
+    }
+}
+
+.tenc-header__cookies-anchor {
+    color: #00d69e;
+    transition: color .2s ease-in
+}
+
+.tenc-header__cookies-anchor:active, .tenc-header__cookies-anchor:focus, .tenc-header__cookies-anchor:hover {
+    color: #fff;
+    outline: none
+}
+
+.tenc-header__branding {
+    float: left;
+    height: 55px;
+    position: relative;
+    width: 100px;
+    z-index: 100
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-header__branding {
+        width: 170px
+    }
+}
+
+.tenc-header__branding--contact-modal, .tenc-header__branding--product-design-ebook-modal {
+    position: absolute
+}
+
+.tenc-header__logo {
+    display: block;
+    border: none;
+    height: 46px;
+    margin: 15px 0 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-header__logo {
+        height: 60px;
+        margin: 15px 0 0 45px
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .tenc-header__logo {
+        height: 60px;
+        margin: 15px 0 0 200px;
+    }
+}
+
+.tenc-header__navigation {
+    -ms-flex-align: center;
+    align-items: center;
+    background: rgba(32, 32, 32, .96);
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    padding-top: 10px;
+    pointer-events: none;
+    transition: opacity .3s;
+    visibility: hidden;
+    display: none;
+    width: 100%;
+    z-index: 998
+}
+
+@media only screen and (min-width: 420px) {
+    .tenc-header__navigation {
+        min-height: 400px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header__navigation {
+        display: block;
+        min-height: 0;
+        padding-top: 0;
+        visibility: visible
+    }
+}
+
+.menu--open .tenc-header__navigation {
+    opacity: 1;
+    pointer-events: all;
+    height: 100vh
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header__navigation--main {
+        background: transparent;
+        float: right;
+        margin: -6px 0 0;
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        width: auto;
+        height: auto
+    }
+}
+
+.tenc-header__navigation--back {
+    float: right;
+    margin-top: -4px;
+    letter-spacing: -.5px;
+    margin-right: 13px
+}
+
+@-moz-document url-prefix() {
+    .tenc-header__navigation--back {
+        margin-top: -11px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header__navigation--back {
+        display: block
+    }
+}
+
+.tenc-header__navigation--back-careers {
+    margin: 24px 40px
+}
+
+.tenc-header__navigation--back-careers .button-gradient {
+    padding: 10px 20px;
+    color: #fff
+}
+
+.tenc-header__navigation--back-careers .button-gradient:hover {
+    color: #fff;
+    opacity: 1
+}
+
+.tenc-header__burger {
+    float: right
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header__burger {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .tenc-header__burger .tenc-header__link {
+        display: none
+    }
+}
+
+.tenc-header--floating {
+    background: #0b0618;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    position: fixed;
+    transition: opacity .5s;
+    z-index: 50;
+    padding: 0
+}
+
+.tenc-header--floating .tenc-navigation__item, .tenc-header--floating.tenc-navigation__item:hover {
+    color: #24272a;
+}
+
+.tenc-header--floating .tenc-navigation__item {
+    color: #24272a;
+    opacity: .9
+}
+
+.tenc-header--floating .tenc-navigation__item:hover {
+    color: #24272a;
+    opacity: .9
+}
+
+.tenc-header--floating .tenc-header__navigation {
+    display: none
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header--floating .tenc-header__navigation {
+        display: block
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header--floating .tenc-header__navigation--blog {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-header--floating-services:before {
+        border-bottom: 1px solid #48484c;
+        content: "";
+        height: 90px;
+        width: 10%;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        animation: header .5s forwards
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-header--floating-services:before {
+        right: 180px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-header--floating-services:before {
+        right: 80px
+    }
+}
+
+.tenc-header--floating-open {
+    padding: 0;
+    opacity: 1;
+    visibility: visible
+}
+
+.tenc-header--floating-open > .container--relative {
+    background: #fff;
+    height: 90px;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-header--floating-open > .container--relative {
+        padding: 0
+    }
+}
+
+.tenc-header--floating-open .tenc-burger__icon {
+    top: 30px;
+    right: 30px
+}
+
+.tenc-header--floating-open .tenc-header__navigation--hire {
+    display: block
+}
+
+.tenc-header--hidden {
+    opacity: 0
+}
+
+.tenc-header__link {
+    font-size: 14px;
+    font-size: 1.4rem;
+    /*font-family: BioSans-SemiBold, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    color: #7a7981;
+    text-transform: uppercase
+}
+
+.tenc-header__link:active, .tenc-header__link:focus, .tenc-header__link:hover {
+    color: #00d69e
+}
+
+.menu--open {
+    overflow: hidden;
+    height: 100vh
+}
+
+.menu--open img, .menu--open section {
+    display: none
+}
+
+.menu--open .tenc-header {
+    height: 0;
+    padding: 0
+}
+
+.menu--open .tenc-header__branding {
+    height: 0;
+    margin: 0
+}
+
+.menu--open .tenc-header__navigation {
+    background: #fff;
+    visibility: visible;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh
+}
+
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 767px) {
+    .menu--open .tenc-header__navigation {
+        display: grid;
+        padding: 30px 0
+    }
+}
+
+.menu--open .tenc-burger__icon {
+    top: 30px;
+    right: 40px
+}

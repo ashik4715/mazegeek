@@ -1,0 +1,829 @@
+.tenc-hire-us {
+    background-color: #ebefd0;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: -120px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.tenc-hire-us--services-mobile {
+    margin-bottom: 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-hire-us--services-mobile {
+        margin-bottom: 0
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-hire-us--services-mobile {
+        margin-bottom: 0
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-hire-us {
+        margin-bottom: -110px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-hire-us {
+        padding: 70px 0;
+        margin-bottom: -140px
+    }
+}
+
+.tenc-hire-us--services-mobile {
+    padding: 30px 0 70px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-hire-us--services-mobile {
+        padding: 50px 0 100px
+    }
+}
+
+.tenc-hire-us__heading {
+    font-size: 26px;
+    /*font-size: 2.6rem;*/
+    font-family: BioSans-Light, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -1px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-hire-us__heading {
+        font-size: 32px;
+        /*font-size: 3.2rem;*/
+        line-height: 2.11;
+        letter-spacing: -.8px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-hire-us__heading {
+        font-size: 46px;
+        /*font-size: 4.6rem;*/
+        line-height: 1.65;
+        letter-spacing: -1px
+    }
+}
+
+.tenc-hire-us__heading--services-mobile {
+    margin: 0 20px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-hire-us__heading--services-mobile {
+        font-size: 38px;
+        margin: 0
+    }
+}
+
+.tenc-hire-us__copy--services-mobile {
+    margin: 0 20px 40px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-hire-us__copy--services-mobile {
+        font-size: 26px;
+        margin-bottom: 40px
+    }
+}
+
+.tenc-hire-us__button {
+    margin-top: 30px
+}
+
+.rwd-br--on-small {
+    display: block
+}
+
+@media only screen and (min-width: 768px) {
+    .rwd-br--on-small {
+        display: none
+    }
+}
+
+.rwd-br--on-large {
+    display: none
+}
+
+@media only screen and (min-width: 1024px) {
+    .rwd-br--on-large {
+        display: block
+    }
+}
+
+.tenc-how-we-work-process {
+    position: relative
+}
+
+.tenc-how-we-work-process-wrapper {
+    background-image: linear-gradient(0deg, #000, #0d0225);
+    background-image: linear-gradient(337deg, rgba(16, 7, 39, .05), #f8f9fa);
+    color: #fff;
+    padding: 50px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-process-wrapper {
+        padding: 80px 0
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    /*.tenc-how-we-work-process-wrapper {*/
+        /*padding: 150px 0 200px*/
+    /*}*/
+}
+
+@media only screen and (min-width: 1920px) {
+    /*.tenc-how-we-work-process-wrapper {*/
+        /*padding: 200px 0 250px*/
+    /*}*/
+}
+
+.tenc-how-we-work-process-border {
+    display: none
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-process-border {
+        display: block;
+        border-left: 1px dashed #2d2b37;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 2px;
+        height: 100%
+    }
+}
+
+.tenc-how-we-work-process-subtitle {
+    font-size: 24px;
+    /*font-size: 2.4rem;*/
+    font-family: BioSans-SemiBold, sans-serif;
+    font-style: normal;
+    font-weight: 400
+}
+
+.tenc-how-we-work-process-intro {
+    margin-bottom: 50px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-process-intro {
+        margin-bottom: 65px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-process-description {
+        width: 50%
+    }
+}
+
+.tenc-how-we-work-process-steps {
+    /*margin-left: 40px*/
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-process-steps {
+        /*margin-left: 60px*/
+    }
+}
+
+.tenc-how-we-work-process-steps__item {
+    margin-bottom: 40px;
+    position: relative
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-process-steps__item {
+        margin-bottom: 80px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-process-steps__item {
+        margin-bottom: 150px
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-process-steps__item:before {
+        content: "";
+        position: absolute;
+        display: block;
+        font-size: 24px;
+        /*font-size: 2.4rem;*/
+        font-family: BioSans-SemiBold, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #6831e4;
+        height: 4px;
+        width: 4px;
+        background: transparent;
+        border: 1px solid #6831e4;
+        border-radius: 50%;
+        top: 10px;
+        left: -62px
+    }
+}
+
+.tenc-how-we-work-process-steps__item:after {
+    content: attr(data-step-number);
+    position: absolute;
+    display: block;
+    font-size: 24px;
+    /*font-size: 2.4rem;*/
+    font-family: BioSans-SemiBold, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #6831e4;
+    top: 0;
+    left: -40px
+}
+
+.tenc-how-we-work-process-sprint-steps {
+    margin-top: 50px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-process-sprint-steps {
+        margin-top: 80px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-process-sprint-steps {
+        margin-top: 100px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-process-sprint-steps__item {
+        -ms-flex-preferred-size: 28%;
+        flex-basis: 28%
+    }
+}
+
+.tenc-how-we-work-team-extension {
+    background: #fff;
+    color: #000;
+    padding: 50px 0 0
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-team-extension {
+        padding: 100px 0 0
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-team-extension {
+        padding: 150px 0 0
+    }
+}
+
+.tenc-how-we-work-team-extension-wrapper {
+    background: #fff
+}
+
+.tenc-how-we-work-team-extension__requirements {
+    padding: 0 0 170px;
+    position: relative
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-team-extension__requirements {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+}
+
+.tenc-how-we-work-team-extension__requirements-wrapper {
+    margin-top: 20px
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-team-extension__requirements-wrapper {
+        margin-top: 40px
+    }
+}
+
+.tenc-how-we-work-team-extension__requirements-item {
+    box-shadow: 0 42px 64px 0 #e7e7ec;
+    padding: 40px 40px 40px 20px;
+    text-transform: uppercase;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    font-size: 16px;
+    /*font-size: 1.6rem;*/
+    /*font-family: BioSans-SemiBold, sans-serif;*/
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-team-extension__requirements-item {
+        margin: 20px 0;
+        width: 49%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-team-extension__requirements-item {
+        margin: 0;
+        width: 24%
+    }
+
+    .tenc-how-we-work-team-extension__requirements-item:first-of-type {
+        margin-left: 0
+    }
+
+    .tenc-how-we-work-team-extension__requirements-item:nth-of-type(4) {
+        margin-right: 0
+    }
+}
+
+.tenc-how-we-work-team-extension__requirements-item:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #5e1fe4;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%)
+}
+
+.tenc-how-we-work-team-extension__requirements-item__text {
+    margin: 0 0 0 40px
+}
+
+.tenc-how-we-work-team-extension__requirements img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    content: "";
+    height: 140px;
+    width: 140px
+}
+
+.tenc-how-we-work-tools {
+    background: #000;
+    background-image: linear-gradient(289deg, rgba(16, 7, 39, .22), #100727);
+    color: #fff;
+    padding: 100px 0 200px
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-tools {
+        padding: 150px 0 200px
+    }
+}
+
+.tenc-how-we-work-tools__list {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin-top: 50px
+}
+
+.tenc-how-we-work-tools__list-item {
+    position: absolute;
+    padding: 15px;
+    color: #000;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 42px 64px 0 hsla(240, 9%, 44%, .1);
+    width: 240px;
+    min-height: 380px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item {
+        padding: 30px;
+        width: 280px;
+        min-height: 455px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item {
+        width: 340px;
+        min-height: 410px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-tools__list-item {
+        min-height: 490px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item {
+        padding: 80px;
+        width: 500px;
+        min-height: 530px
+    }
+}
+
+.tenc-how-we-work-tools__list-item-heading {
+    padding: 15px 0;
+    min-height: 103px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item-heading {
+        padding: 30px 0;
+        min-height: 132px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-tools__list-item-heading {
+        min-height: 156px
+    }
+}
+
+.tenc-how-we-work-tools__list-item-logo {
+    height: 32px;
+    max-width: 65%
+}
+
+.tenc-how-we-work-tools__list-item:first-of-type {
+    left: 0px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item:first-of-type {
+        left: 0px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item:first-of-type {
+        left: 0px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item:first-of-type {
+        left: 0px
+    }
+}
+
+.tenc-how-we-work-tools__list-item:nth-of-type(2) {
+    left: 280px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(2) {
+        left: 320px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(2) {
+        left: 380px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(2) {
+        left: 540px
+    }
+}
+
+.tenc-how-we-work-tools__list-item:nth-of-type(3) {
+    left: 560px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(3) {
+        left: 640px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(3) {
+        left: 760px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(3) {
+        left: 1080px
+    }
+}
+
+.tenc-how-we-work-tools__list-item:nth-of-type(4) {
+    left: 840px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(4) {
+        left: 960px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(4) {
+        left: 1140px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(4) {
+        left: 1620px
+    }
+}
+
+.tenc-how-we-work-tools__list-item:nth-of-type(5) {
+    left: 1120px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(5) {
+        left: 1280px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(5) {
+        left: 1520px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(5) {
+        left: 2160px
+    }
+}
+
+.tenc-how-we-work-tools__list-item:nth-of-type(6) {
+    left: 1400px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(6) {
+        left: 1600px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(6) {
+        left: 1900px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-tools__list-item:nth-of-type(6) {
+        left: 2700px
+    }
+}
+
+.tenc-how-we-work-transparency {
+    padding: 200px 0 50px;
+    color: #000;
+    background: #fff
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-how-we-work-transparency {
+        padding: 250px 0 100px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-transparency {
+        padding: 100px 0 100px
+    }
+}
+
+.tenc-how-we-work-transparency__heading {
+    color: #5e1fe4;
+    -ms-flex-preferred-size: 80%;
+    flex-basis: 80%;
+    padding: 30px 0
+}
+
+.tenc-how-we-work-transparency__content-boxes {
+    margin-top: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-transparency__content-boxes {
+        padding: 0
+    }
+}
+
+.tenc-how-we-work-transparency__content-boxes-item {
+    min-height: 340px;
+    padding: 20px;
+    color: #5e1fe4;
+    background-color: #fff;
+    box-shadow: 0 42px 64px 0 #e7e7ec;
+    width: 100%;
+    margin: 20px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-transparency__content-boxes-item {
+        min-height: 300px;
+        padding: 30px;
+        width: 49%
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-transparency__content-boxes-item {
+        min-height: 350px;
+        width: 32%
+    }
+}
+
+.tenc-how-we-work-transparency__swipe-controller {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    top: 400px;
+    left: 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-transparency__swipe-controller {
+        top: 480px
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-how-we-work-transparency__swipe-controller {
+        top: 530px
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-how-we-work-transparency__swipe-controller {
+        top: 480px
+    }
+}
+
+.tenc-how-we-work-transparency__swipe-arrow-left, .tenc-how-we-work-transparency__swipe-arrow-right {
+    width: 30px;
+    max-height: 20px;
+    cursor: pointer
+}
+
+.tenc-how-we-work-transparency__swipe-arrow--disabled {
+    opacity: .4;
+    cursor: not-allowed
+}
+
+.tenc-how-we-work-transparency__swipe-progressbar {
+    height: 2px;
+    width: 130px;
+    background: #e7e7ec;
+    position: relative;
+    margin: 0 20px
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-how-we-work-transparency__swipe-progressbar {
+        margin: 0 50px
+    }
+}
+
+.tenc-how-we-work-transparency__swipe-progressbar--color {
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    left: 0;
+    top: 0;
+    background: #5e1fe4;
+    transition: width .2s ease
+}
+.tenc-universal-template-how-we-work {
+    color: #c1c1d0
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-universal-template-how-we-work {
+        max-width: 70%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-universal-template-how-we-work {
+        max-width: 50%
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .tenc-universal-template-how-we-work {
+        max-width: 45%
+    }
+}
+
+.tenc-universal-template-how-we-work p {
+    margin: 50px 0
+}
+
+.tenc-universal-template-how-we-work-wrapper {
+    background-image: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.85) 35%, rgba(1, 32, 17, 0.7) 70%, rgba(1, 32, 17, 0.4)), url(../../../assets/images/how-we-work-bg-2.jpg);
+    background-position: 70% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 70px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-universal-template-how-we-work-wrapper {
+        padding: 120px 0
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .tenc-universal-template-how-we-work-wrapper {
+        background-position: 50% 50%;
+        height: 390px;
+        /*max-height: 90vh*/
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .tenc-universal-template-how-we-work-wrapper {
+        background-image: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.85) 35%, rgba(1, 32, 17, 0.7) 70%, rgba(1, 32, 17, 0.4)), url(../../../assets/images/how-we-work-bg-2.jpg)
+    }
+}
+
+/*lets connect*/
+.lets_connect {
+    background-image: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.90) 35%, rgba(1, 32, 17, 0.8) 70%, rgba(1, 32, 17, 0.6)), url(../../../assets/images/mgbanner/lets_connect_banner.webp);
+    background-position: 70% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 70px 0
+}
+
+@media only screen and (min-width: 768px) {
+    .lets_connect {
+        padding: 120px 0
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .lets_connect {
+        background-position: 50% 50%;
+        height: 390px;
+        /*max-height: 90vh*/
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .lets_connect {
+        background-image: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.75) 35%, rgba(1, 32, 17, 0.6) 70%, rgba(1, 32, 17, 0.4)), url(../../../assets/images/mgbanner/lets_connect_banner.webp)
+    }
+}

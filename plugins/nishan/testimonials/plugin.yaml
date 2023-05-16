@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.testimonials::lang.plugin.name'
+    description: 'nishan.testimonials::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-newspaper-o
+    homepage: ''
+navigation:
+    Testimonials:
+        label: 'nishan.testimonials::lang.plugin.name'
+        url: nishan/testimonials/testimonials
+        icon: icon-newspaper-o

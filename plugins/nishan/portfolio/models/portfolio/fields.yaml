@@ -1,0 +1,156 @@
+fields:
+    name:
+        label: 'Portfolio Name'
+        span: full
+        placeholder: 'Enter Portfolio Name'
+        required: 1
+        type: text
+    description:
+        label: 'Portfolio Description'
+        size: ''
+        span: full
+        placeholder: 'Enter Portfolio Description'
+        required: 1
+        type: textarea
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    span: full
+                    size: small
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    slug:
+        label: Slug
+        span: full
+        preset:
+            field: name
+            type: slug
+        type: text
+    icon:
+        label: 'Portfolio icon'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        fileTypes: 'svg, jpg, png'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    category:
+        label: 'Portfolio Category'
+        prompt: 'Add Portfolio Category'
+        span: full
+        type: repeater
+        form:
+            fields:
+                category_item:
+                    label: Category
+                    span: full
+                    placeholder: 'Enter Category'
+                    required: 1
+                    type: text
+    overview:
+        label: Overview
+        prompt: 'Add Overview'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                overview_description:
+                    label: 'Overview Description'
+                    size: ''
+                    span: full
+                    placeholder: 'Enter Overview Description'
+                    required: 1
+                    type: textarea
+                project_name:
+                    label: 'Project Name'
+                    span: auto
+                    placeholder: 'Enter Project Name'
+                    required: 1
+                    type: text
+                website:
+                    label: 'Website URL'
+                    span: auto
+                    placeholder: 'Enter Website URL'
+                    required: 1
+                    type: text
+                type:
+                    label: Type
+                    span: auto
+                    placeholder: 'Enter Type'
+                    required: 1
+                    type: text
+                industry_image:
+                    label: INDUSTRY
+                    mode: file
+                    span: auto
+                    required: 1
+                    type: mediafinder
+                services:
+                    label: Services
+                    prompt: 'Add Services'
+                    span: auto
+                    type: repeater
+                    form:
+                        fields:
+                            service_item:
+                                label: 'Service Item'
+                                span: full
+                                placeholder: 'Enter Service Item'
+                                required: 1
+                                type: text
+    function_header:
+        label: 'Function Header'
+        span: full
+        placeholder: 'Enter Function Header'
+        required: 1
+        type: text
+    function:
+        label: 'Key Functionality'
+        prompt: 'Add Key Functionality'
+        span: full
+        type: repeater
+        form:
+            fields:
+                key_header:
+                    label: 'Key Functionality'
+                    span: full
+                    required: 1
+                    type: text
+                key_title:
+                    label: 'Functionality Title'
+                    span: left
+                    placeholder: 'Enter Functionality Title'
+                    required: 1
+                    type: text
+                key_image:
+                    label: 'Functionality Image'
+                    mode: image
+                    span: right
+                    required: 1
+                    type: mediafinder
+                key_description:
+                    label: 'Functionality Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Functionality Description'
+                    required: 1
+                    type: textarea

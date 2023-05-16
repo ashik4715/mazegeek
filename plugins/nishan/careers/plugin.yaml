@@ -1,0 +1,11 @@
+plugin:
+    name: 'nishan.careers::lang.plugin.name'
+    description: 'nishan.careers::lang.plugin.description'
+    author: nishan
+    icon: oc-icon-slideshare
+    homepage: ''
+navigation:
+    career:
+        label: Career
+        url: nishan/careers/careers
+        icon: icon-slideshare

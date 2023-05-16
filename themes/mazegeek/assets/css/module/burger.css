@@ -1,0 +1,111 @@
+/*1404 - 1512*/
+
+.tenc-burger {
+    cursor: pointer;
+    display: inline-block
+}
+
+.tenc-burger:after, .tenc-burger:before {
+    content: "";
+    display: table
+}
+
+.tenc-burger:after {
+    clear: both
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-burger {
+        height: 58px;
+        width: 70px
+    }
+}
+
+.tenc-burger__label {
+    font-size: 12px;
+    font-size: 1.2rem;
+    /*font-family: BioSans-SemiBold, sans-serif;*/
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    display: none;
+    text-transform: uppercase;
+    float: left;
+    line-height: 26px;
+    text-align: right;
+    position: relative
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-burger__label {
+        display: block;
+        top: 7px
+    }
+}
+
+.tenc-burger__icon {
+    border-bottom: 2px solid #24272a;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    height: 22px;
+    margin: 1px 0 0;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    width: 26px;
+    transition: opacity .2s ease-in-out;
+    z-index: 999
+}
+
+.tenc-burger__icon:before {
+    float: right;
+    margin: 9px 0 0;
+    width: 17px
+}
+
+.tenc-burger__icon:after, .tenc-burger__icon:before {
+    background: #24272a;
+    content: "";
+    display: block;
+    height: 2px;
+    transition: all .2s ease-in-out
+}
+
+.tenc-burger__icon:after {
+    width: 100%
+}
+
+.tenc-burger:not(.tenc-burger--menu-opened):hover .tenc-burger__icon:before {
+    margin-right: 9px;
+    top: 14px
+}
+
+.tenc-burger--menu-opened {
+    padding: 0 0 8px;
+    margin: 20px 20px 0 0
+}
+
+.tenc-burger--menu-opened .tenc-burger__icon {
+    margin: 8px -4px 0 0;
+    transform: rotate(135deg);
+    width: 24px;
+    border-bottom: 2px solid #24272a;
+}
+
+@media only screen and (min-width: 768px) {
+    .tenc-burger--menu-opened .tenc-burger__icon {
+        margin: 8px 0 0 12px
+    }
+}
+
+.tenc-burger--menu-opened .tenc-burger__icon:before {
+    opacity: 0
+}
+
+.tenc-burger--menu-opened .tenc-burger__icon:after {
+    background: #24272a;
+    margin: 20px 0 0;
+    transform: rotate(-90deg);
+    height: 2px
+}

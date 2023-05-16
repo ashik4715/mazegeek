@@ -1,0 +1,1043 @@
+title = "Career"
+url = "/career"
+layout = "default"
+description = "In this page you will find all about Mazegeek BD limited"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[builderList CareerList]
+modelClass = "Nishan\Careers\Models\Career"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "id"
+noRecordsMessage = "No records found"
+detailsPage = "career-details"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
+pageNumber = "{{ :page }}"
+==
+{% put styles %}
+
+
+<!-- Styles -->
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<!-- Module Styles -->
+
+<link rel="stylesheet" type="text/css" href="https://mazegeek.com/css/module.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+
+
+<link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+
+<!-- Mazegeek Style -->
+
+<link rel="stylesheet" type="text/css" href="https://mazegeek.com/css/mazegeek.css">
+
+<style>
+    .tenc-intro--how-we-work {
+        background: linear-gradient(90deg, #091b16, rgba(9, 27, 22, 0.90) 35%, rgba(1, 32, 17, 0.8) 70%, rgba(1, 32, 17, 0.6)), url(themes/mazegeek/assets/images/mgbanner/aboutus_banner.jpg);
+    }
+</style>
+<style>
+
+    .tenc-intro {
+        /* height: 100vh; */
+        min-height: 300px;
+        max-height: 350px;
+    }
+
+    @media  screen and (min-width: 300px) and (max-width: 767px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+    @media  screen and (min-width: 768px) and (max-width: 4000px) {
+        .tenc-intro {
+            /* height: 100vh; */
+            min-height: 300px;
+            max-height: 350px;
+        }
+
+    }
+
+</style>
+<style>
+    .tenc-intro-main__wrapper {
+        max-width: 100%;
+    }
+
+    .tenc-intro-main__wrapper {
+        margin: 0;
+        position: absolute;
+        top: 58%;
+        transform: translateY(-55%);
+        width: 90%;
+    }
+    .top-banner {
+        height: 440px;
+    }
+
+    .tenc-intro-main__buttons {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+
+        align-items: center;
+    }
+    @media  screen and (min-width: 1200px) and (max-width: 1400px) {
+        .tenc-intro-main__wrapper {
+            max-width: 100%;
+        }
+
+        .tenc-intro-main__wrapper {
+            margin: 0;
+            position: absolute;
+            top: 58%;
+            transform: translateY(-55%);
+            width: 86%;
+        }
+    }
+
+
+
+    .home .top-banner .logos {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+
+    .more-service{text-decoration: none}
+
+</style>
+<style>
+    .content a {
+        text-decoration: none;
+    }
+    /*------Career Page------*/
+
+    .category a {
+        text-decoration: none !important;
+        display: inline-block;
+        color: #2ab57d;
+        outline: none;
+    }
+    .career-banner-bg {
+        background: url('themes/mazegeek/assets/images/career-bg.jpg') no-repeat bottom left;
+        background-size: cover;
+    }
+    .career-banner .banner-content {
+        padding: 215px 0 170px;
+        color: #232630;
+    }
+    .career-banner .banner-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+    .career-banner .banner-content p {
+        color: #6f7484;
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+        max-width: 500px;
+    }
+    .career-banner .banner-content .short-infos {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 350px;
+        margin-top: 40px;
+    }
+    .career-banner .banner-content .short-infos .info {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+    .career-banner .banner-content .short-infos .info h4 {
+        font-size: 1.5rem;
+        color: #232630;
+        font-weight: 600;
+    }
+    .career-banner .banner-content .short-infos .info span {
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        color: #6f7484;
+    }
+    .padding-bottom-60 {
+        padding-bottom: 60px;
+    }
+
+    /*---------Job Category---------*/
+
+
+
+    .categories {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .categories:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.08);
+        content: '';
+    }
+    .categories .category {
+        text-align: center;
+        padding: 40px 10px;
+        width: 20%;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+    }
+    .categories .category .icon {
+        margin-bottom: 15px;
+    }
+    .categories .category .icon svg {
+        color: #3cb47c;
+    }
+    .categories .category h5 {
+        font-size: .9rem;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+    }
+    .categories .category h5 span {
+        color: #aaa;
+    }
+
+    .categories .category span {
+        font-family: "Open Sans", sans-serif;
+        font-size: .9rem;
+        font-weight: 400;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .categories .category:hover {
+        border-radius: 3px;
+        -webkit-box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.05);
+    }
+    .categories .vr-1 {
+        left: 20%;
+    }
+
+    .categories > .vr {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.08);
+    }
+    .categories .vr-2 {
+        left: 40%;
+    }
+    .categories > .vr {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.08);
+    }
+    .categories .vr-3 {
+        left: 60%;
+    }
+    .categories > .vr {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.08);
+    }
+    .categories .vr-4 {
+        left: 80%;
+    }
+
+    .categories > .vr {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.08);
+    }
+
+    /*------Recent Job List-----*/
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .alice-bg {
+        background: #f7f9fc29;
+    }
+    .section-header.section-header-2 {
+        text-align: left;
+    }
+
+    .section-header-with-right-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+    .section-header-with-right-content .header-right {
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 500;
+        color: #2ab57d;
+    }
+    .job-list {
+        border-radius: 10px;
+        width: 100%;
+        -webkit-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 30px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-color: #f7f7f7;
+        margin-top: 20px;
+    }
+    .job-list .thumb {
+        width: 80px;
+        height: 80px;
+        border-radius: 3px;
+        background: #f9f9f9;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        position: relative;
+    }
+    .job-list .thumb img {
+        max-width: 35px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .job-list .body {
+        padding-left: 30px;
+        width: calc(100% - 82px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .job-list .body .content h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #232630;
+        margin-bottom: 15px;
+    }
+    .job-list .body .content .info span {
+        margin-right: 15px;
+        font-size: .8rem;
+        color: #6f7484;
+    }
+    .job-list .body .content .info span svg {
+        height: 15px;
+        color: #aaa;
+    }
+    .job-list .body .more .buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .job-list .body .more .buttons .butto {
+        padding: 6px 20px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 20px;
+        background: #f9f9f9;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .job-list .body .more .buttons .favourite {
+        height: 38px;
+        width: 38px;
+        background: #ffffff;
+        text-align: center;
+        line-height: 38px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 50%;
+    }
+    .job-list .body .more .buttons .favourite svg {
+        height: 15px;
+        color: #c3c3c3;
+    }
+    .job-list .body .more .deadline {
+        font-size: .9rem;
+        margin-top: 10px;
+        font-weight: 300;
+        display: block;
+        text-align: right;
+    }
+    .job-list:hover {
+        background: #ffffff;
+        border-top-color: transparent;
+        -webkit-box-shadow: 0px 15px 40px 0px rgba(237, 237, 237, 0.4);
+        box-shadow: 0px 1px 20px 10px rgba(237, 237, 237, 0.4);
+    }
+
+
+    /*----Responsive---*/
+
+
+    @media  all and (max-width: 991px) {
+        .categories:before {
+            top: 33.33%;
+        }
+        .categories:after {
+            position: absolute;
+            top: 66.66%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.08);
+            content: '';
+        }
+        .categories .category {
+            width: 25%;
+        }
+        .categories .vr-1 {
+            left: 25%;
+        }
+        .categories .vr-2 {
+            left: 50%;
+        }
+        .categories .vr-3 {
+            left: 75%;
+        }
+        .categories .vr-4 {
+            left: 0%;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    @media  all and (max-width: 767px) {
+        .categories:before {
+            top: 25%;
+        }
+        .categories:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.08);
+            content: '';
+        }
+        .categories .category {
+            width: 33.33%;
+        }
+        .categories .vr-1 {
+            left: 33.33%;
+        }
+        .categories .vr-2 {
+            left: 66.66%;
+        }
+        .categories .vr-3 {
+            height: 1px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 75%;
+        }
+        .job-list {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
+        .job-list .body {
+            display: block;
+        }
+        .job-list .body .more .buttons {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            padding-top: 20px;
+        }
+        .job-list .body .more .buttons .butto {
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        .job-list .body .more .deadline {
+            text-align: left;
+        }
+
+
+        .job-title-and-info .title .thumb {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media  all and (max-width: 575px) {
+        .categories:before {
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 1px;
+        }
+        .categories:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 0;
+        }
+        .categories .category {
+            width: 50%;
+        }
+        .categories .vr-1 {
+            height: 1px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 20%;
+        }
+        .categories .vr-2 {
+            height: 1px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 40%;
+        }
+        .categories .vr-3 {
+            height: 1px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 60%;
+        }
+        .categories .vr-4 {
+            height: 1px;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 80%;
+        }
+
+    }
+    @media (max-width: 479px){
+        .section-header-with-right-content {
+            display: block;
+        }
+        .section-header-with-right-content .header-right {
+            margin-top: 10px;
+        }
+        .job-list {
+            display: block;
+        }
+        .job-list .thumb {
+            margin-bottom: 20px;
+        }
+        .job-list .thumb:before {
+            height: 0;
+            width: 0;
+        }
+        .job-list .body {
+            padding-left: 0;
+            width: 100%;
+        }
+        .job-list .body .content .info span {
+            margin-right: 10px;
+        }
+
+    }
+    @media  all and (max-width: 379px) {
+        .categories:before {
+            height: 0;
+            width: 0;
+        }
+        .categories .category {
+            width: 100%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .categories .vr-1 {
+            height: 0;
+        }
+        .categories .vr-2 {
+            height: 0;
+        }
+        .categories .vr-3 {
+            height: 0;
+        }
+        .categories .vr-4 {
+            height: 0;
+        }
+
+
+        .job-tab .nav-item a:focus,
+        .job-tab .nav-item a:hover {
+            display: block;
+        }
+
+        .job-title-and-info .buttons a {
+            display: block;
+            width: 180px;
+            text-align: center;
+        }
+
+        .job-title-and-info .buttons .save svg {
+            margin-left: 0;
+        }
+        .career-banner .banner-content {
+            padding: 18px 0 0px;
+            color: #232630;
+        }
+    }
+
+    /*
+---------------------------------------------
+our work
+---------------------------------------------
+*/
+    .page-app {
+        position: relative;
+        float: left;
+        width: 100%;
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .page-app:hover .app-content:before {
+        height: 100%;
+    }
+
+    .page-app:hover .app-content .title {
+        color: #ffffff;
+    }
+
+    .page-app:hover .app-content .text {
+        color: #F7F8FF;
+    }
+
+    .page-app:hover .app-content .stars li {
+        color: #F7F8FF;
+    }
+
+    .page-app:before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        z-index: 1;
+        height: 100%;
+        background: #fff;
+        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+    }
+
+    .page-app .icon {
+        float: left;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        top: -50px;
+        z-index: 3;
+        margin-top: 20px;
+    }
+
+    .page-app .app-content {
+        position: relative;
+        z-index: 2;
+        float: right;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 15px;
+        padding-top: 70px;
+        overflow: hidden;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .page-app .app-content:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        left: 0px;
+        bottom: 0px;
+        background-image: linear-gradient(127deg, #3ab07a 0%, #24764b 91%);
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+        z-index: 1;
+    }
+
+    .page-app .app-content .title {
+        font-weight: 400;
+        font-size: 16px;
+        color: #3B566E;
+        letter-spacing: 0.7px;
+        margin-bottom: 2px !important;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+
+    .page-app .app-content .stars {
+        overflow: hidden;
+        margin-bottom: 15px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    .page-app .app-content .stars li {
+        display: inline;
+        margin-right: 2px;
+        font-size: 12px;
+        color: #AEBCD6;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+
+    .page-app .app-content .stars li i.active {
+        color: #F5A623;
+    }
+
+    .page-app .app-content .text {
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+        line-height: 28px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 100px;
+        color: black;
+    }
+    .offers .offer {
+        border: 0px solid #f3f3f3;
+        box-shadow: 2px 3px 22px rgba(46,61,73,.15);
+        border-radius: 10px;
+    }
+
+    .offers .offer {
+        width: 160px;
+        height: 160px;
+        border: 0px solid #bdbdbd;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 15px;
+    }
+    .offer .text{
+        font-size: 12px;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .section-1-bg{
+        background-image: linear-gradient(to bottom right, #F7F7F7, #fafafa);
+    }
+
+    .services-col-1 {
+        border: 0px solid #f6f6f6;
+        padding: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    .heading-div-1 {
+        padding-bottom: 40px;
+    }
+    .heading-div-1 h2{color: #000; font-size: 25px}
+    .content-top-space3 {
+        padding-top: 30px;
+    }
+    .services-col-content h5{font-size: 15px}
+    .services-col-content p{font-size: 14px}
+    .services-col-img{padding-bottom: 10px}
+
+    .content-top-space1 {
+        padding-top: 10px;
+    }
+    @media  only screen and (max-width: 991px) and (min-width: 250px){
+        .res-mar-center {
+            margin: 0 auto;
+        }}
+</style>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    .product-thumb {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        /*background-color: #f2f4f8;*/
+        /*margin-bottom: 10px;*/
+        margin-right: 0;
+        height: 125px;
+        width: auto;
+
+    }
+
+    .product-thumb img {
+        object-fit: scale-down;
+    }
+</style>
+{% endput %}
+
+{% set records = CareerList.records %}
+{% set displayColumn = CareerList.displayColumn %}
+{% set noRecordsMessage = CareerList.noRecordsMessage %}
+{% set detailsPage = CareerList.detailsPage %}
+{% set detailsKeyColumn = CareerList.detailsKeyColumn %}
+{% set detailsUrlParameter = CareerList.detailsUrlParameter %}
+
+{% put meta %}
+{% for record in records %}
+{% if loop.index == 1 %}
+{% for each in record.meta %}
+<title>{{each.meta_title}}</title>
+<meta name="title" content="{{each.meta_title}}">
+<meta name="description" content="{{each.meta_description}}">
+<meta name="twitter:title" content="{{each.meta_title}}">
+<meta name="twitter:description" content="{{each.meta_description}}">
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endput %}
+
+<main role="main" id="main">
+
+    <section class="tenc-intro tenc-intro--how-we-work">
+        <div class="continer">
+            <div class="tenc-intro-main__wrapper
+                tenc-intro-main__wrapper--short">
+                <div class="tenc-intro-main mt-4">
+
+                    <h1 class="h2 fw-600 tenc-intro-main__title text-center color-white">
+        <span class="tenc-intro-main__title-part color-white">
+          Career
+        </span>
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner career-banner career-banner-bg" style="display: none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="banner-content">
+                        <h1>Work with us</h1>
+                        <p>We are constantly on the lookout for the right talent to complement our current group of
+                            “Geek”s.<br><br>
+
+                            At MazeGeek, we put our clients at the center of everything we do.
+                            Whether you are a master coder, design freak, marketing maniac or whatever, we expect our
+                            future “Geek”s to be:</p>
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="section-padding section-1-bg" id="services">
+        <div class="container heading-ff-2">
+            <div class="heading-div-1 text-center">
+                <h2 class="pb-4 text-center color-black">WORK FOR A COMPANY THAT OFFERS</h2>
+
+            </div>
+            <div class="row rowsafari">
+                {% for record in records %}
+                {% for offer in record.job_offer %}
+
+                <div class="col-sm-6 col-md-6 col-lg-3 res-mar-center">
+                    <div class="services-col-1 text-center">
+                        <div class="services-col-img">
+                            <img src="{{offer.offer_logo|media}}" alt="icon" data-at2x="images/80x80x3@2x.png">
+                        </div>
+                        <div class="services-col-content">
+                            <h5><a href="#">{{offer.offer_title}}</a></h5>
+
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="no-data">{{ noRecordsMessage }}</div>
+                {% endfor %}
+                {% endfor %}
+
+            </div>
+            <div class="row rowsafari d-none" >
+                {% for record in records %}
+                {% for offer in record.job_offer %}
+
+                <div class="col-sm-6 col-md-6 col-lg-3 res-mar-center">
+                    <div class="services-col-1 text-center">
+                        <div class="services-col-img">
+                            <img src="{{offer.offer_logo|media}}" alt="icon" data-at2x="images/80x80x3@2x.png">
+                        </div>
+                        <div class="services-col-content">
+                            <h5><a href="#">{{offer.offer_title}}</a></h5>
+
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="no-data">{{ noRecordsMessage }}</div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div class="section-padding alice-bg">
+        <div class="container">
+            <h2 class="h2 fw-300 pb-2 pb-md-4 text-center strong color-black">Available Jobs</h2>
+
+            <div class="row">
+                <div class="col">
+                    {% for record in records %}
+                    {% for list in record.job_list %}
+                    <div class="job-list">
+                        <div class="thumb">
+                            <a href="https://mazegeek.com/graphic-designer">
+                                <img src="{{list.job_icon|media}}" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="content">
+                                <h4><a href="https://mazegeek.com/graphic-designer">{{list.job_designation}}</a></h4>
+                                <div class="info">
+
+                                    <span class="office-location"><a ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>{{list.job_location}}</a></span>
+                                    <span class="job-type full-time"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{{list.job_nature}}</a></span>
+                                </div>
+                            </div>
+                            <div class="more">
+                                <div class="buttons">
+                                    {% spaceless %}
+                                    {% if detailsPage %}
+                                    <a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(record, detailsKeyColumn) }) }}" class="butto">Apply Now</a>
+                                    {% endif %}
+                                    {% endspaceless %}
+                                </div>
+                                <p class="deadline">Deadline: {{list.job_deadline}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="no-data">{{ noRecordsMessage }}</div>
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-2 mb-5" style="display: none">
+        <a href="https://mazegeek.com/job-list" class="button-gradient
+                  button-gradient--simple
+                  button-gradient--empty
+                  button-gradient--no-shadow
+                  button-gradient--big-font
+                  button-gradient--dark-text">
+            View All Jobs
+        </a>
+    </div>
+
+</main>
+
+{% put scripts %}
+
+{% endput %}

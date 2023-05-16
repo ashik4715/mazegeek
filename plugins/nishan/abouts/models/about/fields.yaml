@@ -1,0 +1,54 @@
+fields:
+    meta:
+        label: 'SEO Section'
+        prompt: 'Add Meta Details'
+        maxItems: '1'
+        span: full
+        type: repeater
+        form:
+            fields:
+                meta_title:
+                    label: 'Meta Title'
+                    span: full
+                    placeholder: 'Enter Meta Title'
+                    required: 1
+                    type: text
+                meta_description:
+                    label: 'Meta Description'
+                    size: small
+                    span: full
+                    placeholder: 'Enter Meta Description'
+                    required: 1
+                    type: textarea
+    title:
+        label: 'About item'
+        prompt: 'Add About item'
+        span: full
+        type: repeater
+        form:
+            fields:
+                label:
+                    label: Label
+                    span: auto
+                    placeholder: 'Enter Label'
+                    required: 1
+                    type: text
+                amount:
+                    label: Amount
+                    span: auto
+                    placeholder: 'Enter Amount'
+                    required: 1
+                    type: text
+                about_icon:
+                    label: 'About Icon'
+                    mode: file
+                    span: auto
+                    required: 1
+                    type: mediafinder
+    details:
+        label: 'About Details'
+        size: small
+        span: full
+        placeholder: 'Enter About Details'
+        required: 1
+        type: textarea

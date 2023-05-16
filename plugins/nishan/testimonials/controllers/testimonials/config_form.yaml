@@ -1,0 +1,10 @@
+name: Testimonials
+form: $/nishan/testimonials/models/testimonial/fields.yaml
+modelClass: Nishan\Testimonials\Models\Testimonial
+defaultRedirect: nishan/testimonials/testimonials
+create:
+    redirect: 'nishan/testimonials/testimonials/update/:id'
+    redirectClose: nishan/testimonials/testimonials
+update:
+    redirect: nishan/testimonials/testimonials
+    redirectClose: nishan/testimonials/testimonials

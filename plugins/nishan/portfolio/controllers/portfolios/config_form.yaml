@@ -1,0 +1,10 @@
+name: Portfolios
+form: $/nishan/portfolio/models/portfolio/fields.yaml
+modelClass: Nishan\Portfolio\Models\Portfolio
+defaultRedirect: nishan/portfolio/portfolios
+create:
+    redirect: 'nishan/portfolio/portfolios/update/:id'
+    redirectClose: nishan/portfolio/portfolios
+update:
+    redirect: nishan/portfolio/portfolios
+    redirectClose: nishan/portfolio/portfolios
